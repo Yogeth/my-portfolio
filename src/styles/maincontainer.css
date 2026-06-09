@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#mainContainer{
+    /* background-color: red; */
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 2fr 85% 2fr;
+    
+}

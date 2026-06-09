@@ -1,0 +1,13 @@
+#footer{
+    background-color: chartreuse;
+    position: sticky;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+#footer img{
+    width: 30px;
+    height: 30px;
+}
