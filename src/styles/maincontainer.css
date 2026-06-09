@@ -5,7 +5,6 @@
 }
 
 #mainContainer{
-    /* background-color: red; */
     min-height: 100vh;
     display: grid;
     grid-template-rows: 2fr 85% 2fr;

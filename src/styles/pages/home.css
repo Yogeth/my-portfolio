@@ -1,0 +1,10 @@
+#body{
+    background-color:navy;
+    color:white;
+    padding: 20px;
+}
+
+#body span {
+    border:1px solid red;
+    padding: 4px;
+}

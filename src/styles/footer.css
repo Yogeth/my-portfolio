@@ -1,5 +1,5 @@
 #footer{
-    background-color: chartreuse;
+    background-color:grey;
     position: sticky;
     bottom: 0px;
     display: flex;
@@ -10,6 +10,7 @@
 #footer section img{
     width: 30px;
     height: 30px;
+    
 }
 
 #footer section{
@@ -17,4 +18,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+#footer section p{
+    font-weight:bold;
+    color:white;
+}
+
+#footer .link{
+    text-decoration: none;
+
 }
