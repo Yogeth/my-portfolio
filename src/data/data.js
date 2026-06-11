@@ -34,5 +34,11 @@ export const HomePageData={
   name:'yogeth',
   role:'Full-Stack Java Developer',
   para:'Specializing in robust backend architectures with Java and Spring Boot, integrated with dynamic, responsive React frontends.Delivering enterprise-grade precision in every module.',
-  skills:["Java 21","Spring Boot 3","React + JS","CSS","MariaDB","Docker","Bash","Git"]
+  skills:["Java 21","Spring Boot 3","React + JS","CSS","MariaDB","Docker","Bash","Git"],
+  sysarcTitle:'System Architecture',
+  sysarc:'Designing distributed microservices with Spring Cloud and Eureka for maximum uptime and resilience.',
+  apiTitle:'API Excellence',
+  apiExcellence:'Building clean, RESTful APIs using Spring Boot 3, documented with OpenAPI/Swagger and secured via OAuth2.',
+
+
 }
