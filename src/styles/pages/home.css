@@ -1,25 +1,43 @@
+:root{
+    --primary-color:#60a5fa;
+    --background-color:#131313;
+    --surface-bright-color:#393939 ;
+    --text-color:#e3e3e3;
+
+}
+
+
 #body{
-    background-color:navy;
-    color:white;
+    background-color:var(--background-color);
+    color:var(--text-color);
     padding: 1.5rem;
     padding-top:50px;
     display: grid;
 }
 
 #hire {
-    border:1px solid red;
+    border:2px solid var(--surface-bright-color);
     border-radius:1rem;
-    width: 50%;
-    height: 50%;
+    width: 65%;
+    height: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1px;
+    gap:0.7em;
+    background-color:green;
+    color:black
 }
 
-#hire>span{
-    display: flex;
-    gap: 10px;
-     
+#hire #dot{
+
+    color: white;
+    font-size:x-large;
 }
 
+#body h1 {
+    font-size: 40px;
+}
+
+#body h1 span{
+    color:red;
+}

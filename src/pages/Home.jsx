@@ -4,15 +4,13 @@ export default function Home() {
   return (
     <div id="body">
       <div id="hire">
-        <span>
-          <p>●</p>
+          <p id="dot">●</p>
           <p>AVAILABLE</p>
           <p>FOR</p>
           <p>HIRE</p>
-        </span>
         </div>
       <p>{HomePageData.name} | {HomePageData.role}</p>
-      <h1>{HomePageData.heading}</h1>
+      <h1>Building Scalable <span>Full-Stack</span> Solutions</h1>
       <p>{HomePageData.para}</p>
       <section>View Projects</section>
       <section>Download CV</section>
