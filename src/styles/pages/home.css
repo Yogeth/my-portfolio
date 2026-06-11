@@ -8,7 +8,6 @@
 
 
 #body{
-    background-color:var(--background-color);
     color:var(--text-color);
     padding: 1.5rem;
     padding-top:60px;
@@ -83,5 +82,25 @@
 }
 
 #featured_capabilities{
-    border: 2px solid red;
+    border:2px solid green;
+    display:flex;
+    flex-direction: column;
+    gap: 40px;
+    padding:20px;
+    color: var(--text-color);
+
+}
+
+#sysarc{
+    border:2px solid red;
+    padding:20px;
+}
+#api{
+    border:2px solid blue;
+    padding:20px;
+}
+#sysarc p,#api p{
+    font-size: 20pt;
+    letter-spacing:1px;
+    line-height: 30px;
 }

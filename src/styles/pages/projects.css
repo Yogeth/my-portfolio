@@ -1,0 +1,42 @@
+#projectsPage{
+    min-height: 100vh;
+    color: white;
+    
+}
+#projectsPage #intro{
+    color:var(--primary-color);
+    font-size: 14pt;
+    padding: 20px 20px 5px 20px;
+}
+
+#projectHeading{
+    color:aqua;
+    padding: 0 0 20px 20px ;
+}
+
+#projectsPage ul{
+    color:var(--text-color);
+    padding:20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style-type: none;
+
+}
+
+#projectsPage ul li {
+    border:1px solid red;
+    padding:10px;
+    letter-spacing: 2px;
+    width: fit-content;
+
+}
+
+#showCase{
+    border:2px solid wheat;
+    margin: 20px;
+}
+
+#projectImg{
+    width: 100%;
+}

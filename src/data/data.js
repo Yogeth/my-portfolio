@@ -40,5 +40,20 @@ export const HomePageData={
   apiTitle:'API Excellence',
   apiExcellence:'Building clean, RESTful APIs using Spring Boot 3, documented with OpenAPI/Swagger and secured via OAuth2.',
 
+}
+
+export const ProjectsPageData={
+  intro:'What I Build',
+  heading:'End-to-end solutions combining clean code, scalable architecture, and user-centric design.',
+  filterbtns:['All Projects','Java / SpringBoot','Reactjs','Bash'],
+  showcase:[
+    {
+      img:'src/assets/images/unnamed.png',
+      title:'DataPulse Analytics',
+      para:'Real-time data visualization platform processing million-point datasets with interactive WebGL rendering.',
+      tech:['React','css','java']
+    }
+  ]
 
 }
+
