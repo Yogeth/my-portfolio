@@ -52,7 +52,31 @@ export const ProjectsPageData={
       title:'DataPulse Analytics',
       para:'Real-time data visualization platform processing million-point datasets with interactive WebGL rendering.',
       tech:['React','css','java']
-    }
+    },
+     {
+      img:'src/assets/images/unnamed.png',
+      title:'DataPulse Analytics',
+      para:'Real-time data visualization platform processing million-point datasets with interactive WebGL rendering.',
+      tech:['React','css','java']
+    },
+    {
+      img:'src/assets/images/unnamed.png',
+      title:'DataPulse Analytics',
+      para:'Real-time data visualization platform processing million-point datasets with interactive WebGL rendering.',
+      tech:['React','css','java']
+    },
+    {
+      img:'src/assets/images/unnamed.png',
+      title:'DataPulse Analytics',
+      para:'Real-time data visualization platform processing million-point datasets with interactive WebGL rendering.',
+      tech:['React','css','java']
+    },
+    {
+      img:'src/assets/images/unnamed.png',
+      title:'DataPulse Analytics',
+      para:'Real-time data visualization platform processing million-point datasets with interactive WebGL rendering.',
+      tech:['React','css','java']
+    },
   ]
 
 }

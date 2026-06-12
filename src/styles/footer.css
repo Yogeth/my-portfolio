@@ -1,11 +1,12 @@
 #footer{
     background-color:grey;
     position: sticky;
-    bottom: 0px;
+    bottom: 0%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
+    z-index: 1;
 
 }
 #footer section img{

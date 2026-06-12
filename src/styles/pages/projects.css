@@ -1,5 +1,5 @@
 #projectsPage{
-    min-height: 100vh;
+    min-height: 200vh;
     color: white;
     
 }
@@ -14,7 +14,7 @@
     padding: 0 0 20px 20px ;
 }
 
-#projectsPage ul{
+#projectsPage #filterContainer{
     color:var(--text-color);
     padding:20px;
     display: flex;
@@ -24,7 +24,7 @@
 
 }
 
-#projectsPage ul li {
+#projectsPage #filterContainer #filterBtns {
     border:1px solid red;
     padding:10px;
     letter-spacing: 2px;
@@ -33,10 +33,62 @@
 }
 
 #showCase{
-    border:2px solid wheat;
-    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 #projectImg{
     width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+#textContent{
+    border : 2px solid green;
+    z-index: 1;
+    position: absolute;
+    bottom:0;
+   background-color: red;
+   height: 50%;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   padding: 20px;
+
+}
+
+#projectContainer{
+    position:relative;
+    width: 100%;
+    height: 525px;
+    background-color: red;
+    border: 2px solid blue;
+
+
+}
+
+#tech{
+    color: black;
+    background-color: green;
+    list-style-type: none;
+    border: 2px solid honeydew;
+    padding:2px 20px 2px 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+}
+
+#techContainer{
+    display: flex;
+    gap: 6px;
+    
+}
+
+#titleSpan{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
