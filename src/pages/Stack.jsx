@@ -10,23 +10,26 @@ export default function Stack() {
           <div id="skillSection">
          {StackData.tech.skills.map((element) => (
           <>
-              <section>
+              <section id="skillPercent">
                 <p>
                   <span>{element.txt}</span>
                   <span>{element.percent}</span>
                 </p>
-                <button></button>
+                <button id="skillbtn">
+                  <button id="btn-span"
+                   style={{width:element.percent}}></button>
+                </button>
               </section>
          </>
         ))}
         </div>
-         <div id="stackContainer">
+         {/* <div id="stackContainer">
           {
             StackData.tech.stacks.map((element,i)=>(
               <button key={i} id="stackbtn">{element}</button>
             ))
           }
-            </div>
+            </div> */}
       </div>
     </div>
   );
