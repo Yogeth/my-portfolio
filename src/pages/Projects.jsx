@@ -1,5 +1,6 @@
 import "/src/styles/pages/projects.css";
 import { ProjectsPageData } from "../data/data.js";
+import { Link } from "react-router";
 export default function Projects() {
   return (
     <div id="projectsPage">
@@ -44,6 +45,19 @@ export default function Projects() {
             </div>
           </div>
         ))}
+
+        <div id="_">
+          <h1>Have a project in mind?</h1>
+          <p style={{ fontSize: "16pt", letterSpacing: "1px" }}>
+            Let's build something robust together.
+          </p>
+          <Link to={'/contact'}>
+          <button style={{ padding: "15px 0 15px 0", 
+            borderRadius: "50px",width:'100%' }}>
+            Get in Touch
+          </button>
+          </Link>
+        </div>
       </section>
     </div>
   );

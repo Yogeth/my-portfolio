@@ -1,5 +1,5 @@
 #projectsPage{
-    min-height: 200vh;
+    min-height: 100vh;
     color: white;
     
 }
@@ -91,4 +91,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+#_{
+    background-color: red;
+    padding:40px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    
 }
