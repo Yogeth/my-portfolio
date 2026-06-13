@@ -4,12 +4,9 @@
     margin: 50px 10px 10px 10px;
 }
 #stackContainer{
-    background-color: blue;
+    /* background-color: blue; */
 
 
-}
-#stacks{
-    
 }
 
 #stackHeading{
@@ -33,9 +30,30 @@
 }
 
 #skillSection{
-    background-color: green;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-#skillSection:first-child{
-    background-color: aqua;
+
+#skillSection>section>p{
+display: flex;
+justify-content: space-between;
+}
+
+#skillSection>section{
+    display: flex;
+    flex-direction: column;
+}
+
+#stackContainer{
+   display: flex;
+   gap: 10px;
+   flex-wrap: wrap;
+
+}
+
+#stackbtn{
+    padding:5px;
 }

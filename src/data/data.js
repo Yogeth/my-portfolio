@@ -73,13 +73,21 @@ export const StackData = {
   heading: 'Technical Proficiency',
   para: 'A deep dive into my architectural toolset. Focused on building scalable, high-performance Java ecosystems with modern frontend integration and automated deployment pipelines.',
   tech: {
-    skills: [{
-      title: 'Backend Engineering',
-      java: ['Java & Spring Boot', 95],
-      arch: ['Microservices Architecture', 88],
-      database: ['SQL & NoSQL Databases', 82],
-      stacks: ['JPA / HIBERNATE', 'KAFKA', 'REST APIS', 'JUNIT'],
-    }]
+    skills: [
+      {
+        txt:'java & Spring Boot',
+        percent:'95%'
+      },
+      {
+        txt:'Microservices Architecture',
+        percent:'88%'
+      },
+       {
+        txt:'SQL & NoSQL Databases',
+        percent:'82%'
+      }
+    ],
+    stacks:['JPA / HIBERNATE','KAFKA','REST APIS','JUNIT']
   }
 }
 
