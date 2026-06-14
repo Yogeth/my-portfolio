@@ -116,8 +116,12 @@ export const ContactData={
     link:'https://github.com/Yogeth'
   },
   {
-    media:"LinkedIN",
-    link:'https://www.linkedin.com/'
+    media:"LinkedIn",
+    link:'https://www.linkedin.com/in/yogeth-c-r-493105333/'
+  },
+  {
+    media:'whatsApp',
+    link:'https://wa.me?text=917845024959'
   }
 ],
 }

@@ -15,9 +15,7 @@ export default function Contact() {
             <input type="text" />
           </label>
           <label htmlFor="body"> TRANSMISSION_BODY
-            <textarea id="txtarea" >
-
-            </textarea>
+            <textarea id="txtarea" defaultValue=""/>
           </label>
            <button type='submit' id='formbtn'>
                  EXECUTE_SEND 
@@ -29,9 +27,12 @@ export default function Contact() {
         {
           ContactData.social.map((element,i)=>(
               <li key={i}>
-                <span>{element}</span>
+                <span>{element.media}</span>
                 <span>
-                  <a href="https://github.com/Yogeth">→</a>
+                  <a href={element.link}>
+                    <img style={{height:'20px',width:'20px'}}
+                     src="src/assets/open-in-new-svgrepo-com.svg" alt="open_in_new" />
+                  </a>
                 </span>
               </li>
           ))
