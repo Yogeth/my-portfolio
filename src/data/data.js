@@ -107,3 +107,6 @@ export const StackData = {
   }
 }
 
+export const ContactData={
+  para:'Ready to bridge the gap between concept and production. Whether you have a project inquiry or just want to discuss the latest Java frameworks, my terminal is always open.'
+}
