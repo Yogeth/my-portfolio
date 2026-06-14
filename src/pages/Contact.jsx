@@ -23,6 +23,21 @@ export default function Contact() {
                  EXECUTE_SEND 
            </button>
       </form>
+      <section id='section3'>
+        <h2>SOCIAL_NODES</h2>
+        <ul>
+        {
+          ContactData.social.map((element,i)=>(
+              <li key={i}>
+                <span>{element}</span>
+                <span>
+                  <a href="https://github.com/Yogeth">→</a>
+                </span>
+              </li>
+          ))
+        }
+        </ul>
+      </section>
 
     </div>
   )

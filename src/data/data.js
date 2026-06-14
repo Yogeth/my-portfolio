@@ -1,3 +1,5 @@
+import { Link } from "react-router"
+
 export const Data = {
   "name": "yogeth",
 
@@ -108,5 +110,14 @@ export const StackData = {
 }
 
 export const ContactData={
-  para:'Ready to bridge the gap between concept and production. Whether you have a project inquiry or just want to discuss the latest Java frameworks, my terminal is always open.'
+  para:'Ready to bridge the gap between concept and production. Whether you have a project inquiry or just want to discuss the latest Java frameworks, my terminal is always open.',
+  social:[{
+    media:'GitHub',
+    link:'https://github.com/Yogeth'
+  },
+  {
+    media:"LinkedIN",
+    link:'https://www.linkedin.com/'
+  }
+],
 }
