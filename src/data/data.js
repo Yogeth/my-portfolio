@@ -73,7 +73,7 @@ export const StackData = {
   heading: 'Technical Proficiency',
   para: 'A deep dive into my architectural toolset. Focused on building scalable, high-performance Java ecosystems with modern frontend integration and automated deployment pipelines.',
   tech: {
-    skills: [
+    skills:[[
       {
         txt:'java & Spring Boot',
         percent:'95%'
@@ -86,8 +86,24 @@ export const StackData = {
         txt:'SQL & NoSQL Databases',
         percent:'82%'
       }
-    ],
-    stacks:['JPA / HIBERNATE','KAFKA','REST APIS','JUNIT']
+    ],[
+      {
+        txt:'React.js',
+        percent:'85%'
+      },
+      {
+        txt:'TailWind css',
+        percent:'90%'
+      },
+      {
+        txt:'TypeScript',
+        percent:'75%'
+      },
+    ]]
+  },
+  devops:{
+    title:'DevOps',
+    skill:['Docker & Containerization','AWS (EC2, S3, RDS)','CI/CD Pipelines (Jenkins)','Git / Trunk-based Dev']
   }
 }
 
