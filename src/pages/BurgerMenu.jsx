@@ -1,11 +1,18 @@
 import '/src/styles/pages/burgermenu.css'
-export default function BurgerMenu({setBurgerMenu}) {
+export default function BurgerMenu({setBurgerMenu,theme,setTheme}) {
   return (
     <div id='menuContent'>
-        <img src="/src/assets/cancel-svgrepo-com.svg" alt="cancel" height="25px" width="25px"
-        onClick={()=>setBurgerMenu(false)}
-        />
-        <h4>BurgerMenu</h4>
+        <div>
+          <h4>Dark Mode</h4>
+          <button id='themebtn' >
+            <button id='innerthemebtn' 
+            onClick={()=>setTheme(true)}
+            style={{transform:'translateX(100%)'}}
+             >
+              
+            </button>
+          </button>
+        </div>
         </div>
   )
 }

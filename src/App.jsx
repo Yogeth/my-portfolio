@@ -6,11 +6,16 @@ import BurgerMenu from './pages/BurgerMenu.jsx';
 import './styles/maincontainer.css';
 
 function App() {
-  const[burgermenu,setBurgerMenu] = useState(false);
+  const[burgerMenu,setBurgerMenu] = useState(false);
+  const[theme,setTheme] = useState(false);
   return (
     <div id='mainContainer'> 
-     {burgermenu&&<BurgerMenu setBurgerMenu={setBurgerMenu}/>}
-      <NavBar setBurgerMenu={setBurgerMenu}/>
+     {burgerMenu&&<BurgerMenu 
+     setBurgerMenu={setBurgerMenu}
+     theme={theme}
+     setTheme={setTheme}
+     />}
+      <NavBar  burgerMenu={burgerMenu} setBurgerMenu={setBurgerMenu}/>
       <Body/>
       <Footer/>
     </div>
