@@ -1,56 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 :root{
     --primary-color:#60a5fa;
     --background-color:#131313;
     --surface-bright-color:#393939 ;
-    --text-color:#e3e3e3;
+    --text-color: #c1c7d3 ;
+    --accent-color:#FFBB70;
+    --button-color:#A4C9FF ;
+    --sucess-green:#4ade80;
+    --text-primary:#e5e2e1;
+    --text-secondary:#c1c7d3;
 
 }
 
 
 #body{
-    color:var(--text-color);
+    color:var(--text-secondary);
     padding: 1.5rem;
     padding-top:60px;
     display: flex;
     flex-direction: column;
     gap: 40px;
+    background-color:var(--background-color);
+    line-height: 1.6;
+    font-family: "Inter",sans-serif;
+    font-size: 16px;
+    font-weight: 400;
    } 
 
 #hire {
-    border:2px solid var(--surface-bright-color);
-    border-radius:1rem;
-    width: 65%;
+    border: 1px solid var(--primary-color);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: var(--primary-color);
+    padding: 10px 18px ;
+    border-radius: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:0.7em;
-    background-color:green;
-    color:black
+    
+}
+
+#hire:hover{
+    box-shadow: 0 0 20px var(--primary-color);
+    transform: translateY(-2px);
 }
 
 #hire #dot{
-
-    color: white;
-    font-size:x-large;
+    width: 8px;
+    height: 8px;
+    background: currentColor;
+    border-radius: 50%;
 }
 
 #body h1 {
-    font-size: 40px;
+    font-size: 48px;
+    line-height: 1.1;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    
 }
 
 #body h1 span{
-    color:red;
+    color:var(--accent-color);
+    
 }
 
 #body #projects{
-    border:2px dotted var(--text-color);
-    background-color:var(--primary-color);
+    background-color:var(--button-color);
     color: var(--background-color);
     width:50%;
     padding: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
 }
 
 #body #cv {
@@ -61,6 +93,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
 #body ul{
@@ -72,16 +106,23 @@
 }
 
 #body ul #skills{ 
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--button-color);
+    color: var(--button-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding:10px;
+    padding:10px 6px 10px 5px;
+    letter-spacing: 0.05em;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     
 }
 
 #featured_capabilities{
-    border:2px solid green;
+    font-family: 'Inter',sans-serif;
     display:flex;
     flex-direction: column;
     gap: 40px;
@@ -91,7 +132,7 @@
 }
 
 #sysarc{
-    border:2px solid red;
+   background-color: #393939;
     padding:20px;
 }
 #api{

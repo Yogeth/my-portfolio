@@ -16,7 +16,7 @@ function App() {
      setTheme={setTheme}
      />}
       <NavBar  burgerMenu={burgerMenu} setBurgerMenu={setBurgerMenu}/>
-      <Body/>
+      <Body theme={theme}/>
       <Footer/>
     </div>
   );

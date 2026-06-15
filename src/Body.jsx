@@ -6,10 +6,10 @@ import Stack from "./pages/Stack";
 import Contact from "./pages/Contact";
 import PageNotFound from "./pages/PageNotFound";
 
-export default function Body() {
+export default function Body({theme}) {
   
   return (
-    <>
+    <div style={{backgroundColor:theme?'white':'black'}}>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/projects" element={<Projects/>}/>
@@ -27,7 +27,7 @@ export default function Body() {
        </section>
        <h4 style={{textAlign:'center'}}>© 2026 Yogeth | Built with React.js</h4>
       </div>
-    </>
+    </div>
   
   );
 }

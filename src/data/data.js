@@ -1,7 +1,7 @@
 import { Link } from "react-router"
 
 export const Data = {
-  "name": "yogeth",
+  "name": "Yogeth",
 
 }
 

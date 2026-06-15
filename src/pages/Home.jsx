@@ -1,11 +1,12 @@
 import { HomePageData } from "../data/data.js";
+import { Link } from "react-router";
 import "/src/styles/pages/home.css";
 export default function Home() {
   return (
     <>
     <div id="body">
       <div id="hire">
-        <p id="dot">●</p>
+        <p id="dot"></p>
         <p>AVAILABLE</p>
         <p>FOR</p>
         <p>HIRE</p>
@@ -20,8 +21,11 @@ export default function Home() {
       <div style={{display:"flex",
         flexDirection:"column",
         gap:"10px" }}>
-        <p id="projects">View Projects</p>
-      <p id="cv">Download CV</p>
+        <Link to="/projects" style={{textDecoration:'none'}}>
+             <p id="projects">View Projects</p>
+        </Link>
+      <a href="/src/assets/doc/Yogeth_CR_Resume.pdf" 
+         download="Yogeth_Resume"id="cv">Download CV</a>
       </div>
       <ul>
         {HomePageData.skills.map((element, i) => (

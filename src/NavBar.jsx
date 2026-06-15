@@ -3,14 +3,18 @@ import {Data}from './data/data.js'
 export default function NavBar({setBurgerMenu,burgerMenu}) {
   return (
     <div id='navbar'>
-      <p>{Data.name}.dev</p>
+      <section>
+        <img src="src/assets/terminal-box-fill-svgrepo-com.svg" alt="terminal" />
+        <p>{Data.name}.Dev</p>
+      </section>
       {!burgerMenu?(
       <img src='src/assets/burger-menu.svg' alt="hamburger-Menu" 
-       onClick={()=>setBurgerMenu(true)}
+       onClick={()=>setBurgerMenu(!burgerMenu)}
       />
       ):(
       <img src="/src/assets/cancel-svgrepo-com.svg" alt="cancel"
-      onClick={()=>setBurgerMenu(false)} />
+      height='30px' width="30px"
+      onClick={()=>setBurgerMenu(!burgerMenu)} />
       )
       }
     </div>
