@@ -17,11 +17,11 @@ export default function Stack() {
               <section id="skillPercent" >
                 <p>
                   <span>{element.txt}</span>
-                  <span>{element.percent}</span>
+                  <span >{element.percent}</span>
                 </p>
                 <button id="skillbtn">
-                  <button id="btn-span"
-                   style={{width:element.percent}}></button>
+                  <div id="btn-span"
+                   style={{width:element.percent}}></div>
                 </button>
               </section>
          </div>

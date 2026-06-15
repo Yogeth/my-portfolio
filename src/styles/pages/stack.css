@@ -99,3 +99,16 @@
   height: 20px;
   width: 20px;
 }
+#btn-span{
+  background-color: orange;
+  animation:percent 1s ease-out;
+}
+
+@keyframes percent{
+  0%{
+    width: 5%;
+  }
+  100%{
+    width: 100%;
+  }
+}

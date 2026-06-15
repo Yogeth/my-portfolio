@@ -1,14 +1,19 @@
 #navbar{
-    background-color: grey;
+    background: #201f1f;
+    height: 64px;
+    padding: 0 24px;
+    border-bottom: 1px solid #334155;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position:sticky;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #e5e2e1;
+    position: sticky;
     top:0%;
-    padding: 1rem;
-    z-index: 10;
+    z-index: 11;
 
-      
 }
 
 #navbar img{

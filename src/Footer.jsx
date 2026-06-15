@@ -7,7 +7,7 @@ export default function Footer() {
     <div id='footer'>
      {
       FooterData.map((element,i)=>(
-        <Link className='link' to={element.endpoint} key={i}>
+        <Link className='link' to={element.endpoint} key={i} id='footerbtn'>
           <section>
             <img src={element.src} alt={element.alt} />
             <p>{element.txt}</p>

@@ -7,7 +7,7 @@
     top:7%;
     z-index: 4;
 }
-#menuContent div{
+#menuContent > div{
     background-color: red;
     display: flex;
     justify-content: space-between;

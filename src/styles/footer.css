@@ -1,12 +1,18 @@
 #footer{
-    background-color:grey;
+    background: #201f1f;
+    height: 64px;
+    padding: 0 24px;
+    border-bottom: 1px solid #334155;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #e5e2e1;
     position: sticky;
     bottom: 0%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem;
-    z-index: 5;
+    z-index: 11;
 
 }
 #footer section img{
@@ -14,6 +20,8 @@
     height: 30px;
     
 }
+
+
 
 #footer section{
     display: flex;
@@ -29,5 +37,10 @@
 
 #footer .link{
     text-decoration: none;
+
+}
+
+#footerbtn:focus{
+    -webkit-tap-highlight-color: transparent;
 
 }

@@ -5,13 +5,13 @@ export default function BurgerMenu({setBurgerMenu,theme,setTheme}) {
         <div>
           <h4>Light Mode</h4>
           <button id='themebtn' >
-            <button id='innerthemebtn' 
+            <div id='innerthemebtn' 
             onClick={()=>setTheme(!theme)}
              style={{transform:theme?'translateX(100%)':'translateX(0%)'    
              }}
              >
               
-            </button>
+            </div>
           </button>
         </div>
         </div>
