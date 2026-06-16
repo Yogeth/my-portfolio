@@ -21,7 +21,6 @@ export default function Body({ theme }) {
           flexDirection: "column",
           gap: "10px",
           padding: "10px",
-          // marginBottom:"65px",
           borderTop: "1px solid white",
           fontFamily: "JetBrains Mono",
         }}

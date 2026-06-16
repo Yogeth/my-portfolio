@@ -1,48 +1,56 @@
  import '/src/styles/pages/contact.css'
  import { ContactData } from '../data/data.js'
- import { useContext } from 'react';
+ import { useContext,useRef} from 'react';
  import {UserContext} from '/src/App.jsx'
  import emailjs from "@emailjs/browser";
 export default function Contact() {
+  //ref
+  const form = useRef();
 //context
-     const setFormInput = useContext(UserContext);
+ const {formInput,setFormInput} = useContext(UserContext);
   function handleSubmit(e){
     e.preventDefault();
 
-    emailjs.send(
-    "service_dxjjiif",
-    "__ejs-test-mail-service__",
-    {
-      name: "Yogeth",
-      email: "yogeth2005@gmail.com",
-      message: "HI i built my new",
-    },
-    "kUkcL4dsfdC1QU7uB"
-  )
-  .then(() => {
+    emailjs
+    .sendForm(
+     import.meta.env.VITE_SERVICE_ID,
+     import.meta.env.VITE_TEMPLATE_ID,
+    form.current,
+     { publicKey:import.meta.env.VITE_PUBLIC_KEY,}
+    ).then(() => {
     alert("Email sent");
   })
-  .catch(() => {
+  .catch((err) => {
     alert("Failed");
+    console.log(err);
   });
 }
-  
+function handleChange(el,names){
+setFormInput(values=>({...values,[names]:el.target.value}))
+}
+
   return (
     <div id="contactPage">
       <section id='section1'>
         <h1 style={{fontSize:'26pt',letterSpacing:'1px'}}>Initialize <span style={{color:'aqua'}}>Connection</span></h1>
       <p>{ContactData.para}</p>
       </section>
-      <form id='section2' onSubmit={(e)=>{handleSubmit(e)}}>
+      <form ref={form} id='section2' onSubmit={(e)=>{handleSubmit(e)}}>
           <label htmlFor="name">NAME
-            <input type="text" value={"Hello"}/>
+            <input name="name" type="text" value={formInput.name} 
+            onChange={(el)=>handleChange(el,"name")}/>
           </label>
           <label htmlFor="email">EMAIL_ADDRESS
-            <input type="text" value={"xyz@gmail.com"}/>
+            <input name="email" type="text" value={formInput.email}
+            onChange={(el)=>handleChange(el,"email")}
+            />
           </label>
           <label htmlFor="body"> TRANSMISSION_BODY
-            <textarea id="txtarea" defaultValue="" value={"good Morning"}/>
+            <textarea name="body"id="txtarea"  value={formInput.body}
+            onChange={(el)=>handleChange(el,"body")}
+            />
           </label>
+          
            <button type='submit' id='formbtn'>
                  EXECUTE_SEND 
            </button>

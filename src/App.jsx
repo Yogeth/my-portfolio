@@ -5,14 +5,14 @@ import Body from './Body.jsx';
 import BurgerMenu from './pages/BurgerMenu.jsx';
 import './styles/maincontainer.css';
 
+//context
+export const UserContext =createContext();
 function App() {
   const[burgerMenu,setBurgerMenu] = useState(false);
   const[theme,setTheme] = useState(false);
   const[formInput,setFormInput]= useState({
-    name:'',email:'',body:''
+    name:'',email:'',body:' '
   });
-  //context
-  export const UserContext =createContext();
   return (
     <div id='mainContainer'> 
      {burgerMenu&&<BurgerMenu 
@@ -22,7 +22,7 @@ function App() {
      />}
       <NavBar  burgerMenu={burgerMenu} setBurgerMenu={setBurgerMenu}/>
 
-      <UserContext.Provider value={{setFormInput}}>
+      <UserContext.Provider value={{setFormInput,formInput}}>
         <Body theme={theme}/>
       </UserContext.Provider>
       <Footer/>
