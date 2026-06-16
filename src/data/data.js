@@ -87,7 +87,7 @@ export const StackData = {
     skills: [[
       {
         txt: 'java & Spring Boot',
-        percent: '90%'
+        percent: '80%'
       },
       {
         txt: 'Microservices Architecture',

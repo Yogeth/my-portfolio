@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,createContext} from 'react'
 import Footer from './Footer.jsx'
 import NavBar from './NavBar.jsx';
 import Body from './Body.jsx';
@@ -8,6 +8,11 @@ import './styles/maincontainer.css';
 function App() {
   const[burgerMenu,setBurgerMenu] = useState(false);
   const[theme,setTheme] = useState(false);
+  const[formInput,setFormInput]= useState({
+    name:'',email:'',body:''
+  });
+  //context
+  export const UserContext =createContext();
   return (
     <div id='mainContainer'> 
      {burgerMenu&&<BurgerMenu 
@@ -16,7 +21,10 @@ function App() {
      setTheme={setTheme}
      />}
       <NavBar  burgerMenu={burgerMenu} setBurgerMenu={setBurgerMenu}/>
-      <Body theme={theme}/>
+
+      <UserContext.Provider value={{setFormInput}}>
+        <Body theme={theme}/>
+      </UserContext.Provider>
       <Footer/>
     </div>
   );
