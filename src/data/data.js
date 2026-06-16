@@ -59,10 +59,10 @@ export const ProjectsPageData = {
   filterbtns: ['All Projects', 'Java / SpringBoot', 'Reactjs', 'Bash'],
   showcase: [
     {
-      img: 'src/assets/images/unnamed.png',
-      title: 'DataPulse Analytics',
-      para: 'Real-time data visualization platform processing million-point datasets with interactive WebGL rendering.',
-      tech: ['React', 'css', 'java']
+      img: 'src/assets/images/weather.webp',
+      title: 'Weather App',
+      para: 'Developed a modern weather dashboard that fetches real-time weather data from external APIs. Features include city search, current conditions, temperature forecasts, humidity tracking, and responsive design for mobile and desktop devices.',
+      tech: ['React', 'Css', 'Api']
     },
     {
       img: 'src/assets/images/unnamed.png',
@@ -71,7 +71,7 @@ export const ProjectsPageData = {
       tech: ['React', 'css', 'java']
     },
     {
-      img: 'src/assets/images/unnamed.png',
+      img: 'src/assets/images/weather.png',
       title: 'DataPulse Analytics',
       para: 'Real-time data visualization platform processing million-point datasets with interactive WebGL rendering.',
       tech: ['React', 'css', 'java']

@@ -46,7 +46,7 @@ setFormInput(values=>({...values,[names]:el.target.value}))
             />
           </label>
           <label htmlFor="body"> TRANSMISSION_BODY
-            <textarea name="body"id="txtarea"  value={formInput.body}
+            <textarea name="message" id="txtarea"  value={formInput.body}
             onChange={(el)=>handleChange(el,"body")}
             />
           </label>
