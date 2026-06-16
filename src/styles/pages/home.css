@@ -10,6 +10,8 @@
   --sucess-green: #4ade80;
   --text-primary: #e5e2e1;
   --text-secondary: #c1c7d3;
+  --font-inter: "Inter", sans-serif;
+  --font-jetbrains:"JetBrains Mono",monospace;
 }
 
 #body {
@@ -21,19 +23,19 @@
   gap: 40px;
   background-color: var(--background-color);
   line-height: 1.6;
-  font-family: "Inter", sans-serif;
+  font-family:var(--font-inter);
   font-size: 16px;
   font-weight: 400;
 }
 
 #hire {
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--sucess-green);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  color: var(--primary-color);
+  color: var(--sucess-green);
   padding: 10px 18px;
   border-radius: 20px;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-inter);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -62,7 +64,7 @@
 #body h1 {
   font-size: 48px;
   line-height: 1.1;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-inter);
   font-weight: 700;
 }
 
@@ -71,8 +73,8 @@
 }
 
 #body #projects {
-  background-color: var(--button-color);
-  color: var(--background-color);
+  background-color: var(--sucess-green);
+  color: var(--surface-bright-color);
   width: 50%;
   padding: 5%;
   display: flex;
@@ -82,8 +84,8 @@
 }
 
 #body #cv {
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
+  border: 2px solid var(--sucess-green);
+  color: var(--sucess-green);
   width: 50%;
   padding: 5%;
   display: flex;
@@ -96,7 +98,7 @@
 #body ul {
   list-style-type: none;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3,1fr) ;
   gap: 10px;
 }
 
@@ -109,27 +111,31 @@
   padding: 10px 6px 10px 5px;
   letter-spacing: 0.05em;
   font-size: 12px;
-  font-family: "Inter", sans-serif;
   font-weight: 600;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 
 #featured_capabilities {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-inter);
   display: flex;
   flex-direction: column;
   gap: 40px;
   padding: 20px;
   color: var(--text-color);
+  background-color: var(--background-color);
+  
 }
 
 #sysarc {
-  background: #201f1f;
-  border: 1px solid #334155;
-  border-radius: 12px;
   padding: 24px;
   transition: all .5s ease;
+background: rgba(172, 167, 166, 0.1);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(0.5px);
+-webkit-backdrop-filter: blur(0.5px);
+border: 1px solid rgba(172, 167, 166, 0.35);
 }
 
 #sysarc:hover {
@@ -139,19 +145,14 @@
   border-left-width: 10px;
   border-radius: 0px;
 }
-#api {
-  border: 2px solid blue;
-  padding: 20px;
-}
+
 #sysarc h1 {
-  font-family: "Inter";
   font-size: 24px;
   font-weight: 600;
   line-height: 2;
   color: #e5e2e1;
 }
 #sysarc p {
-  font-family: "Inter";
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
@@ -159,7 +160,7 @@
 }
 
 #fcheading {
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-jetbrains);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.05em;

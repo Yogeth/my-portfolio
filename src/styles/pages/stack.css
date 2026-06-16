@@ -2,27 +2,35 @@
   color: white;
   min-height: 100vh;
   margin: 50px 10px 10px 10px;
+  font-family: var(--font-inter);
+  background-color: var(--background-color);
+  font-weight: 400;
 }
 
 #stackHeading {
   padding: 10px 10px 5px 10px;
   letter-spacing: 1px;
+  color: var(--text-primary);
 }
 
 #stackPara {
   padding: 10px;
-  font-size: 15pt;
-  font-weight: 500;
-  line-height: 25px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  font-size: 17px;
 }
 
 #skillContainer {
-  background-color: red;
   margin: 50px 10px 10px 10px;
   padding: 30px;
   display: grid;
   gap: 30px;
-  border-radius: 10px;
+  background: rgba(172, 167, 166, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+  border: 1px solid rgba(172, 167, 166, 0.35);
 }
 
 #skillSection {
@@ -57,58 +65,26 @@
   gap: 5px;
 }
 
-#skillbtn{
-    border-radius: 50px;
-    border:none;
-    display: flex;
-    height:5px;
-}
-
-#btn-span{
-    background-color: black;
-    border:none;
-    border-radius:50px ;
-}
-
-#devops{
-  background-color: orange;
-  margin: 50px 10px 10px 10px;
-  border-radius: 10px;
-  padding:30px;
-}
-
-#devops ul li{
-  list-style-type:none;
-  /* background-color: blue; */
+#skillbtn {
+  border-radius: 50px;
+  border: none;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 15px;
-
+  height: 5px;
 }
 
-#devops ul{
-  margin-top:30px ;
-  display: flex;
-  flex-direction:column;
-  gap:10px;
-  font-size: 17pt;
+#btn-span {
+  background-color: #fabd34;
+  animation: percent 1s ease-out;
+  border: none;
+  border-radius: 50px;
 }
 
-#devops ul li img{
-  height: 20px;
-  width: 20px;
-}
-#btn-span{
-  background-color: orange;
-  animation:percent 1s ease-out;
-}
 
-@keyframes percent{
-  0%{
+@keyframes percent {
+  0% {
     width: 5%;
   }
-  100%{
+  100% {
     width: 100%;
   }
 }

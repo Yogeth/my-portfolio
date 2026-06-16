@@ -36,7 +36,7 @@ export const HomePageData = {
   name: 'yogeth',
   role: 'Full-Stack Java Developer',
   para: 'Specializing in robust backend architectures with Java and Spring Boot, integrated with dynamic, responsive React frontends.Delivering enterprise-grade precision in every module.',
-  skills: ["Java 21", "Spring Boot 3", "React + JS", "CSS", "MariaDB", "Docker", "Bash", "Git"],
+  skills: ["Java 21", "Spring Boot 3", "React + JS", "CSS", "MariaDB", "Docker", "Bash", "Git","Build Tools"],
   featuredCapabilites: [
     {
       title: 'System Architecture',
@@ -86,30 +86,48 @@ export const StackData = {
   tech: {
     skills: [[
       {
-        txt: 'java & Spring Boot',
-        percent: '80%'
+        txt: 'Java & Spring Boot',
+        percent: '70%'
       },
       {
-        txt: 'Microservices Architecture',
-        percent: '88%'
+        txt: 'Maria DB',
+        percent: '75%'
       },
       {
-        txt: 'SQL & NoSQL Databases',
-        percent: '82%'
-      }
-    ], [
-      {
-        txt: 'React.js',
+        txt: 'Maven & Gradle',
         percent: '85%'
       },
       {
-        txt: 'TailWind css',
-        percent: '90%'
+           txt:'RESTful APIs',
+           percent:'80%'  
+      }
+    ], [
+      {
+        txt: 'JavaScript & React.js',
+        percent: '85%'
       },
       {
-        txt: 'TypeScript',
-        percent: '75%'
+        txt: 'Vanilla css',
+        percent: '89%'
       },
+      {
+        txt: 'Responsive Design',
+        percent: '85%'
+      },
+    ],[
+      
+      {
+        txt: 'Docker',
+        percent: '65%'
+      },
+      {
+        txt: 'Bash Scripting',
+        percent: '80%'
+      },
+      {
+        txt:'Git',
+        percent:'80%'
+      }
     ]]
   },
   devops: {

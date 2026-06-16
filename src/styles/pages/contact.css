@@ -1,109 +1,109 @@
-
-#contactPage{
-   min-height: 100vh;
-   color:white;
-   display:flex;
-   flex-direction: column;
-   gap: 20px;
-
+#contactPage {
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: var(--font-inter);
+  background-color: var(--background-color);
 }
 
-#section1{
-    /* background-color: red; */
-    padding:50px 20px 50px 20px;
-    display: flex;
-    flex-direction: column;
-    line-height: 30px;
-    gap:30px;
+#section1 {
+  padding: 50px 20px 50px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-#section1 p{
-    font-size:17pt ;
+#section1 p {
+  font-size: 18px;
+  line-height: 1.6;
 }
-#section2{
-    /* background-color: orange; */
-    display: grid;
-    place-content: center;
-    padding:50px;
-    margin: 20px;
-    gap:30px;
-    border: 1px solid red;
-    border-radius: 10px;
-}
-
-#section2 label{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+#section2 {
+  display: grid;
+  place-content: center;
+  padding: 50px;
+  margin: 20px;
+  gap: 30px;
+  background: rgba(172, 167, 166, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+  border: 1px solid rgba(172, 167, 166, 0.35);
 }
 
-#section2 > label > input{
-    background-color: var(--background-color);
-    padding:10px;
-    border: none;
-    border-bottom: 2px solid red;
-    caret-color: aqua;
-    font-size: 16pt;
-    color: white;
-
-}
-#section2 > label > input:focus{
-    outline: none;
-}
-#txtarea{
-    padding:10px;
-    min-height: 100px;
-    border: none;
-    border-bottom:2px solid red;
-    background-color: var(--background-color);
-    caret-color: aqua;
-    font-size: 16pt;
-    color: white;
+#section2 label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-#txtarea:focus{
-    outline:none;
+#section2 > label > input {
+  background-color: var(--surface-bright-color);
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid var(--sucess-green);
+  caret-color: var(--text-color-secondary);
+  font-size: 16pt;
+  color: var(--text-color-secondary);
+}
+#section2 > label > input:focus {
+  outline: none;
+}
+#txtarea {
+  padding: 10px;
+  min-height: 100px;
+  border: none;
+  border-bottom: 2px solid var(--sucess-green);
+  background-color: var(--surface-bright-color);
+  caret-color: var(--text-color-secondary);
+  font-size: 16pt;
+  color: white;
 }
 
-#formbtn{
-    padding:15px;
-    border:none;
-    border-radius: 10px;
-    margin:20px 50px 0 50px;
-    background-color: red;
-    color: white;
-
+#txtarea:focus {
+  outline: none;
 }
 
-#section3{
-    /* background-color: aquamarine; */
-    padding:20px;
-    color: black;
-    margin: 20px;
-    display: grid;
-    gap: 30px;
-    border:1px solid red;
-    border-radius:10px;
-
+#formbtn {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  margin: 20px 50px 0 50px;
+  background-color: var(--primary-color);
+  color: white;
 }
 
-#section3 ul{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+#section3 {
+  padding: 20px;
+  margin: 20px;
+  display: grid;
+  gap: 30px;
+  background: rgba(172, 167, 166, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+  border: 1px solid rgba(172, 167, 166, 0.35);
 }
 
-#section3 ul li{
-    color:white;
-    font-size: 16pt;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 30px 10px 30px;
-
+#section3 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-#section3 h2{
-    padding: 20px 10px 10px 20px ;
-    color:whitesmoke
+#section3 ul li {
+  color: white;
+  font-size: 16pt;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px 10px 30px;
+}
+
+#section3 h2 {
+  padding: 20px 10px 10px 20px;
+  color: whitesmoke;
 }

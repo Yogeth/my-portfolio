@@ -2,7 +2,7 @@ import "/src/styles/pages/stack.css";
 import { StackData } from "../data/data.js";
 export default function Stack() {
 
-  const title=['Backend Engineering','Frontend','devops']
+  const title=['Backend','Frontend','Devops']
   return (
     <div id="stackPage">
       <h1 id="stackHeading">{StackData.heading}</h1>
@@ -29,19 +29,6 @@ export default function Stack() {
         </div>
       </div>
         ))}
-        <div id="devops">
-          <h1>{StackData.devops.title}</h1>
-          <ul>
-            {
-              StackData.devops.skill.map((element,i)=>(
-                <li key={i}>
-                  <img src="src\assets\check-circle-svgrepo-com.svg" alt="check_circle" />
-                  {element}</li>
-              ))
-            }
-          </ul>
-
-        </div>
     </div>
   );
 }
