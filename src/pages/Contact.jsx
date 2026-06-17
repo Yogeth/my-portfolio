@@ -32,7 +32,7 @@ setFormInput(values=>({...values,[names]:el.target.value}))
   return (
     <div id="contactPage">
       <section id='section1'>
-        <h1 style={{fontSize:'26pt',letterSpacing:'1px'}}>Initialize <span style={{color:'aqua'}}>Connection</span></h1>
+        <h1 style={{fontSize:'26pt',letterSpacing:'1px'}}>Initialize <span style={{color:'var(--accent-color)'}}>Connection</span></h1>
       <p>{ContactData.para}</p>
       </section>
       <form ref={form} id='section2' onSubmit={(e)=>{handleSubmit(e)}}>

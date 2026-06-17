@@ -41,9 +41,10 @@
   letter-spacing: 1px;
   transition: all 0.5s ease-out;
   -webkit-tap-highlight-color: transparent;
+  color:var(--text-primary)
 }
 
-.filterBtn:hover {
+.filterBtn:focus,.filterBtn:hover {
   color: var(--accent-color);
 
 }

@@ -5,7 +5,7 @@
   --background-color: #131313;
   --surface-bright-color: #393939;
   --text-color: #c1c7d3;
-  --accent-color: #ffbb70;
+  --accent-color: #fabd34;
   --button-color: #a4c9ff;
   --sucess-green: #4ade80;
   --text-primary: #e5e2e1;
@@ -17,22 +17,21 @@
 #body {
   color: var(--text-secondary);
   padding: 1.5rem;
-  padding-top: 60px;
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
   background-color: var(--background-color);
   line-height: 1.6;
   font-family:var(--font-inter);
-  font-size: 16px;
   font-weight: 400;
 }
 
 #hire {
-  border: 1px solid var(--sucess-green);
+  border: 1px solid var(--accent-color);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  color: var(--sucess-green);
+  color: var(--accent-color);
   padding: 10px 18px;
   border-radius: 20px;
   font-family: var(--font-inter);
@@ -49,10 +48,6 @@
   align-items: center;
 }
 
-#hire:hover {
-  box-shadow: 0 0 20px var(--primary-color);
-  transform: translateY(-2px);
-}
 
 #hire #dot {
   width: 8px;
@@ -62,8 +57,8 @@
 }
 
 #body h1 {
-  font-size: 48px;
-  line-height: 1.1;
+  font-size: 40px;
+  line-height: 1.2;
   font-family: var(--font-inter);
   font-weight: 700;
 }
@@ -73,10 +68,10 @@
 }
 
 #body #projects {
-  background-color: var(--primary-color);
+  background-color: var(--accent-color);
   color: var(--text-primary);
   width: 50%;
-  padding: 5%;
+  padding: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,16 +81,20 @@
 }
 
 #body #cv {
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
   width: 50%;
-  padding: 5%;
+  padding: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   border-radius: 5px;
   font-weight: 600;
+  background: rgba(172, 167, 166, 0.1);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(0.5px);
+-webkit-backdrop-filter: blur(0.5px);
 }
 
 #body ul {
@@ -107,7 +106,7 @@
 
 #body ul #skills {
   border: 1px solid var(--surface-bright-color);
-  color: #fabd34;
+  color:var(--accent-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,7 +165,7 @@ border: 1px solid rgba(172, 167, 166, 0.35);
   color: #e5e2e1;
 }
 #sysarc p {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.6;
   color: #c1c7d3;

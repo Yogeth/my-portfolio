@@ -1,8 +1,13 @@
 import "/src/styles/pages/projects.css";
 import { ProjectsPageData } from "../data/data.js";
 import { Link } from "react-router";
+import { useContext } from "react";
+import { UserContext } from "../App.jsx";
 
 export default function Projects() {
+
+  const{filterbtn,setfilterbtn} = useContext(UserContext)
+  
   return (
     <div id="projectsPage">
       <p id="intro">{ProjectsPageData.intro.toUpperCase()}</p>
@@ -11,14 +16,23 @@ export default function Projects() {
 
       <ul id="filterContainer">
         {ProjectsPageData.filterbtns.map((element, i) => (
-          <li className="filterBtn" key={i}>
+          <li key={i}
+           className="filterBtn"
+           style={{color:filterbtn === element && 'var(--accent-color)'}}
+           onClick={()=>setfilterbtn(ProjectsPageData.filterbtns[i])} >
             {element}
           </li>
         ))}
       </ul>
 
       <section id="showCase">
-        {ProjectsPageData.showcase.map((element, i) => (
+        {
+        ProjectsPageData.showcase
+        .filter((val,k,arr)=>{
+          if(filterbtn === 'All Projects') return arr
+           return val.type === filterbtn && arr
+        })
+        .map((element, i) => (
           <div className="projectContainer" key={i}>
             <img
               className="projectImg"

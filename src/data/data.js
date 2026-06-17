@@ -33,7 +33,7 @@ export const FooterData = [
 ]
 
 export const HomePageData = {
-  name: 'yogeth',
+  name: 'Yogeth',
   role: 'Full-Stack Java Developer',
   para: 'Specializing in robust backend architectures with Java and Spring Boot, integrated with dynamic, responsive React frontends.Delivering enterprise-grade precision in every module.',
   skills: ["Java 21", "Spring Boot 3", "React + JS", "CSS", "MariaDB", "Docker", "Bash", "Git","Build Tools"],
@@ -62,19 +62,29 @@ export const ProjectsPageData = {
       img: 'src/assets/images/weather.webp',
       title: 'Weather App',
       para: 'Developed a modern weather dashboard that fetches real-time weather data from external APIs. Features include city search, current conditions, temperature forecasts, humidity tracking, and responsive design for mobile and desktop devices.',
-      tech: ['React', 'Css', 'Api']
+      tech: ['React', 'Css', 'Api'],
+      type:'Reactjs'
     },
     {
-      img: 'src/assets/images/unnamed.png',
-      title: 'DataPulse Analytics',
-      para: 'Real-time data visualization platform processing million-point datasets with interactive WebGL rendering.',
-      tech: ['React', 'css', 'java']
+      img: 'to do',
+      title: 'ComplainTrack',
+      para: 'ComplainTrack is a web-based complaint management system designed to streamline issue reporting and tracking within IT departments and organizations. Employees can submit complaints related to hardware failures, software issues, billing concerns, network problems, or other workplace incidents through a centralized platform.',
+      tech: ['React', 'css', 'java & springboot','mariadb'],
+      type:'Java / SpringBoot'
     },
     {
-      img: 'src/assets/images/weather.png',
-      title: 'DataPulse Analytics',
-      para: 'Real-time data visualization platform processing million-point datasets with interactive WebGL rendering.',
-      tech: ['React', 'css', 'java']
+      img: 'to do',
+      title: 'Task Manger',
+      para: 'Task Manager is a React.js-based task management application that enables users to create, update, complete, and organize tasks through a simple and responsive interface. The project focuses on improving productivity and task organization using modern frontend development practices.',
+      tech: ['React', 'css'],
+      type:'Reactjs'
+    },
+    {
+      img: 'to do',
+      title: 'Hot Servlet',
+      para: 'HotServlet is a deployment automation tool that streamlines Java Servlet development by automatically building WAR files with Gradle, installing Apache Tomcat when required, deploying applications, and launching the server through a single command.',
+      tech: ['Bash', 'Gradle','Apache Tomcat'],
+      type:'Bash'
     },
   ]
 

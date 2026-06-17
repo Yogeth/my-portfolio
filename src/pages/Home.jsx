@@ -11,13 +11,17 @@ export default function Home() {
           <p>FOR</p>
           <p>HIRE</p>
         </div>
-        <p>
+        <p >
           {HomePageData.name} | {HomePageData.role}
         </p>
         <h1>
           Building Scalable <span>Full-Stack</span> Solutions
         </h1>
-        <p>{HomePageData.para}</p>
+        <p style={{
+          fontSize:'20px',
+          lineHeight:'1.6',
+          fontWeight:'400',
+        }}>{HomePageData.para}</p>
         <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
           <Link to="/projects" style={{ textDecoration: "none" }}>
             <p id="projects">View Projects</p>
@@ -30,6 +34,7 @@ export default function Home() {
             Download CV
           </a>
         </div>
+        <h1>skills</h1>
         <ul>
           {HomePageData.skills.map((element, i) => (
             <li id="skills" key={i}>

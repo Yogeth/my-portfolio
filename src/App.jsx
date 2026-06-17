@@ -13,6 +13,7 @@ function App() {
   const[formInput,setFormInput]= useState({
     name:'',email:'',body:' '
   });
+  const [filterbtn,setfilterbtn]=useState('All Projects');
   return (
     <div id='mainContainer'> 
      {burgerMenu&&<BurgerMenu 
@@ -22,7 +23,7 @@ function App() {
      />}
       <NavBar  burgerMenu={burgerMenu} setBurgerMenu={setBurgerMenu}/>
 
-      <UserContext.Provider value={{setFormInput,formInput}}>
+      <UserContext.Provider value={{setFormInput,formInput,filterbtn,setfilterbtn}}>
         <Body theme={theme}/>
       </UserContext.Provider>
       <Footer/>
