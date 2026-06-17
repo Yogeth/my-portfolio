@@ -16,13 +16,14 @@ export default function Body({ theme }) {
       </Routes>
       <div
         style={{
-          color: "white",
+          color: "var(--text-primary)",
           display: "flex",
           flexDirection: "column",
           gap: "10px",
           padding: "10px",
-          borderTop: "1px solid white",
-          fontFamily: "JetBrains Mono",
+          fontFamily: "Inter,sans-serif",
+          backgroundColor:'var(--background-color)',
+          fontSize:'15px'
         }}
       >
         <section

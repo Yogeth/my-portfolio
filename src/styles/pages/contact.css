@@ -43,10 +43,11 @@
   background-color: var(--surface-bright-color);
   padding: 10px;
   border: none;
-  border-bottom: 2px solid var(--sucess-green);
+  border-bottom: 2px solid var(--accent-color);
   caret-color: var(--text-color-secondary);
-  font-size: 16pt;
+  font-size: 20px;
   color: var(--text-color-secondary);
+  border-radius: 5px;
 }
 #section2 > label > input:focus {
   outline: none;
@@ -55,11 +56,12 @@
   padding: 10px;
   min-height: 100px;
   border: none;
-  border-bottom: 2px solid var(--sucess-green);
+  border-bottom: 2px solid var(--accent-color);
   background-color: var(--surface-bright-color);
   caret-color: var(--text-color-secondary);
-  font-size: 16pt;
+  font-size: 20px;
   color: white;
+  border-radius: 5px;
 }
 
 #txtarea:focus {
@@ -70,9 +72,14 @@
   padding: 15px;
   border: none;
   border-radius: 10px;
-  margin: 20px 50px 0 50px;
+  margin: 20px 70px 0 50px;
   background-color: var(--primary-color);
   color: white;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 #section3 {

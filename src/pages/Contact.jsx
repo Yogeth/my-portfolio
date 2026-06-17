@@ -52,7 +52,7 @@ setFormInput(values=>({...values,[names]:el.target.value}))
           </label>
           
            <button type='submit' id='formbtn'>
-                 EXECUTE_SEND 
+              <img src="src/assets/send-symbol-svgrepo-com.svg" alt="send" /> 
            </button>
       </form>
       <section id='section3'>

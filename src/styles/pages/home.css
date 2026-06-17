@@ -73,19 +73,21 @@
 }
 
 #body #projects {
-  background-color: var(--sucess-green);
-  color: var(--surface-bright-color);
+  background-color: var(--primary-color);
+  color: var(--text-primary);
   width: 50%;
   padding: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 #body #cv {
-  border: 2px solid var(--sucess-green);
-  color: var(--sucess-green);
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
   width: 50%;
   padding: 5%;
   display: flex;
@@ -93,6 +95,7 @@
   align-items: center;
   text-decoration: none;
   border-radius: 5px;
+  font-weight: 600;
 }
 
 #body ul {
@@ -103,8 +106,8 @@
 }
 
 #body ul #skills {
-  border: 1px solid var(--button-color);
-  color: var(--button-color);
+  border: 1px solid var(--surface-bright-color);
+  color: #fabd34;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,9 +115,19 @@
   letter-spacing: 0.05em;
   font-size: 12px;
   font-weight: 600;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(172, 167, 166, 0.1);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(0.5px);
+-webkit-backdrop-filter: blur(0.5px);
+border: 1px solid rgba(172, 167, 166, 0.35);
+transition: all .5s ease-in;
 }
+
+#body ul #skills:hover{
+      transform: translateY(-2px);
+      
+}
+
 
 #featured_capabilities {
   font-family: var(--font-inter);
