@@ -1,4 +1,4 @@
-#menuContent{
+.menuContent{
     color:white;
     height: 84vh;
     width: 250px;
@@ -7,14 +7,14 @@
     top:7%;
     z-index: 4;
 }
-#menuContent > div{
+.menuContent > div{
     background-color: red;
     display: flex;
     justify-content: space-between;
     padding: 20px;
 }
 
-#themebtn{
+.themebtn{
     outline:1px solid black;
     border: none;
     height: 20px;
@@ -24,7 +24,7 @@
     display: flex;
     
 }
-#innerthemebtn{
+.innerthemebtn{
     background-color: green;
     border:none;
     outline:1px solid black;

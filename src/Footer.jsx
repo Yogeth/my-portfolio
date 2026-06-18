@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 export default function Footer() {
 
   return (
-    <div id='footer'>
+    <div className='footer'>
      {
       FooterData.map((element,i)=>(
-        <Link className='link' to={element.endpoint} key={i} id='footerbtn'>
+        <Link className='link' to={element.endpoint} key={i} className='footerbtn'>
           <section>
             <img src={element.src} alt={element.alt} />
             <p>{element.txt}</p>

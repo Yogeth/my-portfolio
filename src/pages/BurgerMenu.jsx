@@ -1,11 +1,11 @@
 import '/src/styles/pages/burgermenu.css'
 export default function BurgerMenu({setBurgerMenu,theme,setTheme}) {
   return (
-    <div id='menuContent'>
+    <div className='menuContent'>
         <div>
           <h4>Light Mode</h4>
-          <button id='themebtn' >
-            <div id='innerthemebtn' 
+          <button className='themebtn' >
+            <div className='innerthemebtn' 
             onClick={()=>setTheme(!theme)}
              style={{transform:theme?'translateX(100%)':'translateX(0%)'    
              }}

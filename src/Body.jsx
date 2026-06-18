@@ -7,7 +7,7 @@ import PageNotFound from "./pages/PageNotFound";
 
 export default function Body({ theme }) {
   return (
-    <div style={{ backgroundColor: theme ? "white" : "black" }}>
+    <div style={{ backgroundColor:'var(--background-color)' }}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />

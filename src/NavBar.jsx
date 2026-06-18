@@ -2,7 +2,7 @@ import './styles/navBar.css'
 import {Data}from './data/data.js'
 export default function NavBar({setBurgerMenu,burgerMenu}) {
   return (
-    <div id='navbar'>
+    <div className='navbar'>
       <section>
         <img src="src/assets/terminal-box-fill-svgrepo-com.svg" alt="terminal" />
         <p>{Data.name}.Dev</p>

@@ -15,7 +15,7 @@ function App() {
   });
   const [filterbtn,setfilterbtn]=useState('All Projects');
   return (
-    <div id='mainContainer'> 
+    <div className='mainContainer'> 
      {burgerMenu&&<BurgerMenu 
      setBurgerMenu={setBurgerMenu}
      theme={theme}

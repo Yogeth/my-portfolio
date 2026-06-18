@@ -1,27 +1,27 @@
-#projectsPage {
+.projectsPage {
   min-height: 100vh;
   color: var(--text-primary);
   font-family: "Inter", sans-serif;
   background-color: var(--background-color);
 }
 
-#intro {
+.intro {
   color: var(--accent-color);
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 500;
   letter-spacing: 1px;
   padding: 20px 20px 20px;
 }
 
-#projectHeading {
+.projectHeading {
   color: var(--text-primary);
   padding: 0 20px 20px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
 }
 
-#filterContainer {
+.filterContainer {
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -49,7 +49,7 @@
 
 }
 
-#showCase {
+.showCase {
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -99,7 +99,7 @@
 }
 
 .projectDescription {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 1.6;
@@ -107,25 +107,23 @@
 
 .techContainer {
   display: flex;
-  flex-wrap: wrap;
   gap: 8px;
-  list-style: none;
+  list-style-type: none;
+  flex-wrap: wrap;
+
 }
 
 .tech {
   border:1px solid var(--accent-color);
   color: var(--accent-color);
-  padding: 7px 12px;
+  padding: 7px;
   border-radius: 3px;
-  font-size: 0.9rem;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 1px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-#contactCard {
+.contactCard {
   background-color: #1b1b1b;
   border: 1px solid var(--surface-bright-color);
   border-radius: 10px;
@@ -136,7 +134,7 @@
 }
 
 .contactText {
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 1px;
 }
 
@@ -148,4 +146,141 @@
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
+}
+
+/* =========================
+   TABLET (768px+)
+========================= */
+@media (min-width: 768px) {
+  .projectsPage {
+    padding: 20px;
+  }
+
+  .intro {
+    font-size: 30px;
+  }
+
+  .projectHeading {
+    font-size: 20px;
+  }
+
+  .filterContainer {
+    gap: 12px;
+  }
+
+  .filterBtn {
+    padding: 10px 18px;
+    font-size: 17px;
+  }
+
+  .showCase {
+    padding: 30px;
+    
+  }
+
+  .projectImg {
+    height: 220px;
+  }
+
+  .projectTitle {
+    font-size: 30px;
+  }
+
+  .projectDescription {
+    font-size: 20px;
+  }
+
+
+  .contactCard {
+    grid-column: span 2;
+    padding: 35px;
+  }
+
+  .contactBtn {
+    width: fit-content;
+    padding: 12px 30px;
+  }
+}
+
+/* =========================
+   SMALL DESKTOP (1024px+)
+========================= */
+@media (min-width: 1024px) {
+  .projectsPage {
+    padding: 40px 80px;
+  }
+
+  .intro {
+    font-size: 32px;
+  }
+
+  .projectHeading {
+    font-size: 22px;
+    max-width: 700px;
+  }
+
+  .showCase {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .projectImg {
+    height: 240px;
+  }
+
+  .projectTitle {
+    font-size: 1.7rem;
+  }
+
+  .projectDescription {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .contactCard {
+    grid-column: span 3;
+    padding: 40px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contactBtn {
+    width: auto;
+    padding: 14px 40px;
+  }
+
+  .filterContainer {
+    justify-content: center;
+  }
+}
+
+/* =========================
+   LARGE DESKTOP (1280px+)
+========================= */
+@media (min-width: 1280px) {
+  .projectsPage {
+    padding: 60px 120px;
+  }
+
+  .intro {
+    font-size: 36px;
+  }
+
+  .projectHeading {
+    font-size: 24px;
+  }
+
+  .showCase {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .projectImg {
+    height: 260px;
+  }
+
+  .contactCard {
+    padding: 50px;
+  }
 }

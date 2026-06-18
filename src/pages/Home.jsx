@@ -4,9 +4,9 @@ import "/src/styles/pages/home.css";
 export default function Home() {
   return (
     <>
-      <div id="body">
-        <div id="hire">
-          <p id="dot"></p>
+      <div className="body">
+        <div className="hire">
+          <p className="dot"></p>
           <p>AVAILABLE</p>
           <p>FOR</p>
           <p>HIRE</p>
@@ -14,43 +14,40 @@ export default function Home() {
         <p >
           {HomePageData.name} | {HomePageData.role}
         </p>
-        <h1>
+        <h1 className="bodytopheading">
           Building Scalable <span>Full-Stack</span> Solutions
         </h1>
-        <p style={{
-          fontSize:'20px',
-          lineHeight:'1.6',
-          fontWeight:'400',
-        }}>{HomePageData.para}</p>
-        <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-          <Link to="/projects" style={{ textDecoration: "none" }}>
-            <p id="projects">View Projects</p>
+        <p  className='homeIntroPara'>{HomePageData.para}</p>
+        <div className="button-group">
+          <Link to="/projects" className="btn-primary">
+            <i className="ti ti-arrow-right">View Projects</i>
           </Link>
           <a
             href="/src/assets/doc/Yogeth_CR_Resume.pdf"
             download="Yogeth_Resume"
-            id="cv"
+            className='btn-secondary'
           >
+              <i className="ti ti-download"></i>
             Download CV
           </a>
         </div>
-        <h1>skills</h1>
+        <p className="skillheading">skills</p>
         <ul>
           {HomePageData.skills.map((element, i) => (
-            <li id="skills" key={i}>
+            <li className="skills" key={i}>
               {element}
             </li>
           ))}
         </ul>
-      </div>
-      <div id="featured_capabilities">
-        <p id="fcheading">FEATURED_CAPABILITIES</p>
+         <p className="fcheading">FEATURED_CAPABILITIES</p>
+      <div className="featured_capabilities">
           {HomePageData.featuredCapabilites.map((element, i) => (
-            <div key={i} id="sysarc">
+            <div key={i} className="sysarc">
               <h1>{element.title}</h1>
-              <p>{element.para}</p>
+              <p className="sysarcPara">{element.para}</p>
             </div>
           ))}
+      </div>
       </div>
     </>
   );

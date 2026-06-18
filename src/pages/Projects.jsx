@@ -9,12 +9,12 @@ export default function Projects() {
   const{filterbtn,setfilterbtn} = useContext(UserContext)
   
   return (
-    <div id="projectsPage">
-      <p id="intro">{ProjectsPageData.intro.toUpperCase()}</p>
+    <div className="projectsPage">
+      <p className="intro">{ProjectsPageData.intro.toUpperCase()}</p>
 
-      <h1 id="projectHeading">{ProjectsPageData.heading}</h1>
+      <h1 className="projectHeading">{ProjectsPageData.heading}</h1>
 
-      <ul id="filterContainer">
+      <ul className="filterContainer">
         {ProjectsPageData.filterbtns.map((element, i) => (
           <li key={i}
            className="filterBtn"
@@ -25,7 +25,7 @@ export default function Projects() {
         ))}
       </ul>
 
-      <section id="showCase">
+      <section className="showCase">
         {
         ProjectsPageData.showcase
         .filter((val,k,arr)=>{
@@ -67,7 +67,7 @@ export default function Projects() {
           </div>
         ))}
 
-        <div id="contactCard">
+        <div className="contactCard">
           <h1>Have a project in mind?</h1>
 
           <p className="contactText">Let's build something robust together.</p>

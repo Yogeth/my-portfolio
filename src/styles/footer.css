@@ -1,4 +1,4 @@
-#footer {
+.footer {
   height: 64px;
   padding: 0 24px;
   border-bottom: 1px solid var(--surface-bright-color);
@@ -15,27 +15,40 @@
   background-color: var(--surface-bright-color);
 
 }
-#footer section img {
+.footer section img {
   width: 30px;
   height: 30px;
 }
 
-#footer section {
+.footer section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-#footer section p {
+.footer section p {
   font-weight: bold;
   color: var(--text-color);
 }
 
-#footer .link {
+.footer .link {
   text-decoration: none;
 }
 
-#footerbtn:focus {
+.footerbtn:focus {
   -webkit-tap-highlight-color: transparent;
+}
+
+@media(min-width:768px) {
+  .footer{
+    display: flex;
+    justify-content: space-around;
+    padding:50px;
+  }
+
+  .footer section img{
+    width: 40px;
+  height: 40px;
+  }
 }

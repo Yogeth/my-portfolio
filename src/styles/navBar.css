@@ -1,4 +1,4 @@
-#navbar{
+.navbar{
     background: #201f1f;
     height: 64px;
     padding: 0 24px;
@@ -16,12 +16,12 @@
 
 }
 
-#navbar img{
+.navbar img{
     width: 30px;
     height: 30px;
 }
 
-#navbar > section {
+.navbar > section {
     display: flex;
     padding: 2px;
     gap:10px;
@@ -29,8 +29,17 @@
     justify-content: center;
 }
 
-#navbar > section > p {
+.navbar > section > p {
     font-size: 15pt;
     font-weight: bold;
 }
 
+@media(min-width:768px){
+    .navbar{
+        padding: 50px;
+    }
+    .navbar img{
+    width: 40px;
+    height: 40px;
+}
+}
