@@ -5,15 +5,12 @@ import { UserContext } from '/src/App.jsx'
 import emailjs from "@emailjs/browser"
 
 export default function Contact() {
-  // Refs
   const form = useRef()
-  
-  // State
+
   const { formInput, setFormInput } = useContext(UserContext)
   const [isLoading, setIsLoading] = useState(false)
   const [submitStatus, setSubmitStatus] = useState(null)
 
-  // Handle input change
   function handleChange(e, fieldName) {
     setFormInput(values => ({
       ...values,
@@ -21,10 +18,14 @@ export default function Contact() {
     }))
   }
 
-  // Handle form submit
   async function handleSubmit(e) {
     e.preventDefault()
-    if (!formInput.name?.trim() || !formInput.email?.trim() || !formInput.message?.trim()) {
+
+    if (
+      !formInput.name?.trim() ||
+      !formInput.email?.trim() ||
+      !formInput.message?.trim()
+    ) {
       setSubmitStatus({
         type: 'error',
         message: 'Please fill in all fields'
@@ -47,10 +48,9 @@ export default function Contact() {
 
       setSubmitStatus({
         type: 'success',
-        message: 'Email sent successfully! I\'ll get back to you soon.'
+        message: "Email sent successfully! I'll get back to you soon."
       })
 
-      // Reset form
       setFormInput({
         name: '',
         email: '',
@@ -63,9 +63,11 @@ export default function Contact() {
 
     } catch (error) {
       console.error('Email error:', error)
+
       setSubmitStatus({
         type: 'error',
-        message: 'Failed to send email. Please try again or contact me directly via social media.'
+        message:
+          'Failed to send email. Please try again or contact me directly via social media.'
       })
     } finally {
       setIsLoading(false)
@@ -74,50 +76,72 @@ export default function Contact() {
 
   return (
     <div className="contactPage">
-      <section className='section1'>
-        <h1 className='section1heading'>
-          Initialize <span>Connection</span>
+      <section className="section1">
+        <h1 className="section1heading">
+          Initialize{'  '}
+          <span className="section1headingSpan">
+            Connection
+          </span>
         </h1>
-        <p className='section1para'>{ContactData.para}</p>
+
+        <p className="section1para">
+          {ContactData.para}
+        </p>
       </section>
 
-      <form ref={form} className='section2' onSubmit={handleSubmit} noValidate>
-        <label htmlFor="name">
+      <form
+        ref={form}
+        className="section2"
+        onSubmit={handleSubmit}
+        noValidate
+      >
+        <label
+          className="formLabel"
+          htmlFor="name"
+        >
           <input
+            className="formInput"
             id="name"
             name="name"
             type="text"
             placeholder="Your full name"
             value={formInput.name || ''}
-            onChange={(e) => handleChange(e, "name")}
+            onChange={(e) => handleChange(e, 'name')}
             required
             disabled={isLoading}
             aria-required="true"
           />
         </label>
 
-        <label htmlFor="email">
+        <label
+          className="formLabel"
+          htmlFor="email"
+        >
           <input
+            className="formInput"
             id="email"
             name="email"
             type="email"
             placeholder="your.email@example.com"
             value={formInput.email || ''}
-            onChange={(e) => handleChange(e, "email")}
+            onChange={(e) => handleChange(e, 'email')}
             required
             disabled={isLoading}
             aria-required="true"
           />
         </label>
 
-        <label htmlFor="message">
+        <label
+          className="formLabel"
+          htmlFor="message"
+        >
           <textarea
             id="message"
             name="message"
             className="txtarea"
             placeholder="Share your thoughts, project ideas, or just say hello..."
             value={formInput.message || ''}
-            onChange={(e) => handleChange(e, "message")}
+            onChange={(e) => handleChange(e, 'message')}
             required
             disabled={isLoading}
             aria-required="true"
@@ -125,25 +149,32 @@ export default function Contact() {
         </label>
 
         {submitStatus && (
-          <div className={`statusMessage ${submitStatus.type}`} role="alert">
+          <div
+            className={`statusMessage ${submitStatus.type}`}
+            role="alert"
+          >
             {submitStatus.type === 'success' ? (
               <i className="ti ti-check"></i>
             ) : (
               <i className="ti ti-alert-circle"></i>
             )}
+
             {submitStatus.message}
           </div>
         )}
 
         <button
-          type='submit'
-          className='formbtn'
+          type="submit"
+          className="formbtn"
           disabled={isLoading}
           aria-busy={isLoading}
         >
           {isLoading ? (
             <>
-              <i className="ti ti-loader-2" style={{ animation: 'spin 1s linear infinite' }}></i>
+              <i
+                className="ti ti-loader-2"
+                style={{ animation: 'spin 1s linear infinite' }}
+              ></i>
               Sending...
             </>
           ) : (
@@ -152,17 +183,32 @@ export default function Contact() {
               Send Message
             </>
           )}
-          <img src="src/assets/send-symbol-svgrepo-com.svg" alt="send" />
+
+          <img
+            className="formbtnIcon"
+            src="src/assets/send-symbol-svgrepo-com.svg"
+            alt="send"
+          />
         </button>
       </form>
 
-      <section className='section3'>
-        <h2>Social_Nodes</h2>
-        <ul>
+      <section className="section3">
+        <h2 className="section3Title">
+          Social_Nodes
+        </h2>
+
+        <ul className="socialList">
           {ContactData.social.map((element, index) => (
-            <li key={index}>
-              <span>{element.media}</span>
+            <li
+              className="socialItem"
+              key={index}
+            >
+              <span className="socialName">
+                {element.media}
+              </span>
+
               <a
+                className="socialLink"
                 href={element.link}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -170,7 +216,12 @@ export default function Contact() {
                 title={`Open ${element.media}`}
               >
                 <i className="ti ti-external-link"></i>
-                <img src="/src/assets/open-in-new-svgrepo-com.svg" alt="open_in_new" />
+
+                <img
+                  className="socialIcon"
+                  src="/src/assets/open-in-new-svgrepo-com.svg"
+                  alt="open_in_new"
+                />
               </a>
             </li>
           ))}

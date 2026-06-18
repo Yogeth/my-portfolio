@@ -32,7 +32,7 @@ export default function Home() {
           </a>
         </div>
         <p className="skillheading">skills</p>
-        <ul>
+        <ul className="homeskillContainer">
           {HomePageData.skills.map((element, i) => (
             <li className="skills" key={i}>
               {element}

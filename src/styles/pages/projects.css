@@ -207,16 +207,17 @@
 ========================= */
 @media (min-width: 1024px) {
   .projectsPage {
-    padding: 40px 80px;
+    padding:  40px;
   }
 
   .intro {
-    font-size: 32px;
+    font-size: 40px;
+    letter-spacing: 1px;
   }
 
   .projectHeading {
-    font-size: 22px;
-    max-width: 700px;
+    font-size: 24px;
+    letter-spacing: 2px;
   }
 
   .showCase {
@@ -233,25 +234,49 @@
   }
 
   .projectDescription {
-    font-size: 16px;
+    font-size: 24px;
     line-height: 1.7;
   }
 
   .contactCard {
-    grid-column: span 3;
     padding: 40px;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    gap: 20px;
+    border: none;
+    background: none;
   }
 
   .contactBtn {
     width: auto;
-    padding: 14px 40px;
+    padding: 16px 50px 16px 50px;
+    font-size: 22px;
+    
+  }
+
+  .contactText{
+    font-size: 26px;
+    letter-spacing: 2px;
+  }
+
+  .question{
+    font-size: 34px;
   }
 
   .filterContainer {
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .filterBtn{
+    font-size: 20px;
+    padding: 15px;
+  }
+  .techContainer{
+   padding-top: 15px;
+  }
+  .tech{
+    padding:10px;
   }
 }
 

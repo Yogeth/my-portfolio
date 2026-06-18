@@ -68,7 +68,7 @@ export default function Projects() {
         ))}
 
         <div className="contactCard">
-          <h1>Have a project in mind?</h1>
+          <h1 className="question">Have a project in mind?</h1>
 
           <p className="contactText">Let's build something robust together.</p>
 

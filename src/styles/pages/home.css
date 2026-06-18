@@ -297,9 +297,9 @@ border: 1px solid rgba(172, 167, 166, 0.35);
     align-items: center;
   }
 
-  ul {
-    display: flex;
-    flex-wrap: wrap;
+.homeskillContainer {
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
     gap: 20px;
    padding: 0px 50px 30px 30px;
     
@@ -341,8 +341,7 @@ border: 1px solid rgba(172, 167, 166, 0.35);
 
 /* ===== Small Desktop (1024px and up) ===== */
 @media (min-width: 1024px) {
-  .body {
-  }
+
 
   .body .bodytopheading {
     font-size: 50px;
@@ -358,14 +357,19 @@ border: 1px solid rgba(172, 167, 166, 0.35);
 
   }
 
-  .sysarc h1 {
-    font-size: 22px;
+  .bodytopheading {
+    font-size: 24px;
   }
 
-  .sysarc p {
-    font-size: 16px;
+  .sysarc .sysarcPara {
+    font-size: 22px;
     line-height: 1.6;
   }
+  
+  .homeIntroPara{
+    font-size: 24px;
+  }
+
 }
 
 /* ===== Large Desktop (1280px and up) ===== */
@@ -374,7 +378,7 @@ border: 1px solid rgba(172, 167, 166, 0.35);
     padding: 80px 140px;
   }
 
-  .body h1 {
+  .bodytopheading {
     font-size: 64px;
   }
 
