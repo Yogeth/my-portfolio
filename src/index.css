@@ -16,4 +16,15 @@
 
   --font-inter: "Inter", sans-serif;
   --font-jetbrains: "JetBrains Mono", monospace;
+
+  --animate-grow: grow .7s ease;
+
+  @keyframes grow {
+    10% {
+      width: var(--percent,10%);
+    }
+    100%{
+      width:var(--percent,100%);
+    }
+  }
 }

@@ -10,22 +10,21 @@ export default function Projects() {
   
   return (
     <div className="p-3 bg-background">
-      <p className="font-bold tracking-widest text-text-primary">{ProjectsPageData.intro}</p>
+      <p className="font-bold text-xl tracking-widest text-text-primary">{ProjectsPageData.intro}</p>
 
-      <h1 className="font-lg text-text-primary pt-3">{ProjectsPageData.heading}</h1>
+      <h1 className="text-lg text-text-secondary pt-3">{ProjectsPageData.heading}</h1>
 
-      <ul className="bg-green-200 font-inter">
+      <ul className="font-inter flex flex-wrap flex-row gap-3 py-6 w-4/5">
         {ProjectsPageData.filterbtns.map((element, i) => (
           <li key={i}
-           className="text-md "
-          //  style={{color:filterbtn === element && 'var(--accent-color)'}}
+           className="text-md text-md border rounded-[7px] p-2 text-accent"
            onClick={()=>setfilterbtn(ProjectsPageData.filterbtns[i])} >
             {element}
           </li>
         ))}
       </ul>
 
-      <section className="showCase">
+      <section className="grid grid-cols-1 p-1 gap-7">
         {
         ProjectsPageData.showcase
         .filter((val,k,arr)=>{
@@ -33,47 +32,45 @@ export default function Projects() {
            return val.type === filterbtn && arr
         })
         .map((element, i) => (
-          <div className="projectContainer" key={i}>
-            <img
-              className="projectImg"
-              src={element.img}
-              alt={element.title}
-              loading="lazy"
-            />
-
-            <div className="textContent">
-              <span className="titleSpan">
-                <h1 className="projectTitle">{element.title}</h1>
+            <div key={i} className="p-6 bg-[rgba(172,167,166,0.1)]
+             h-full w-full bg-white-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100">
+              <span className="flex items-center justify-between ">
+                <h1 className="text-accent text-3xl font-inter font-semibold">{element.title}</h1>
 
                 <a href="https://weather-app-woad-mu-26.vercel.app/">
                   <img
                   className="openIcon"
                   src="/src/assets/open-in-new-svgrepo-com.svg"
                   alt="open-in-new"
+                  height="20px"
+                  width="20px"
                 />
                 </a>
               </span>
 
-              <p className="projectDescription">{element.para}</p>
+              <p className="text-text-secondary text-lg font-medium font-inter pt-5 tracking-wide ">{element.para}</p>
 
-              <ul className="techContainer">
+              <ul className="flex flex-wrap gap-2 pt-3  w-fit">
                 {element.tech.map((el, i) => (
-                  <li className="tech" key={i}>
+                  <li className="border text-accent  flex
+                  justify-center items-center flex-row rounded-sm text-xs p-2" key={i}>
                     {el}
                   </li>
                 ))}
               </ul>
             </div>
-          </div>
         ))}
 
-        <div className="contactCard">
-          <h1 className="question">Have a project in mind?</h1>
+        <div className="p-6 bg-[rgba(172,167,166,0.1)]
+             h-full w-full bg-white-900 rounded-md bg-clip-padding 
+             backdrop-filter backdrop-blur-sm
+              bg-opacity-10 border border-gray-100 flex flex-col gap-3">
+          <h1 className="text-2xl font-semibold  text-text-primary">Have a Project In Mind ?</h1>
 
-          <p className="contactText">Let's build something robust together.</p>
+          <p className="text-text-secondary font-medium font-jetbrains text-lg tracking-wide">Let's build something robust together.</p>
 
           <Link to="/contact">
-            <button className="contactBtn">Get in Touch</button>
+            <button className="bg-text-primary text-shadow-xs  font-semibold font-inter rounded-2xl ml-20 p-3 px-5">Get in Touch</button>
           </Link>
         </div>
       </section>
