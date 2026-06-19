@@ -14,36 +14,13 @@ export default function Body({ theme }) {
         <Route path="/stack" element={<Stack />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <div
-        style={{
-          color: "var(--text-primary)",
-          display: "flex",
-          flexDirection: "column",
-          gap: "10px",
-          padding: "10px",
-          fontFamily: "Inter,sans-serif",
-          backgroundColor:'var(--background-color)',
-          fontSize:'15px'
-        }}
-      >
-        <section
-          style={{ display: "flex", gap: "10px", justifyContent: "center" }}
-        >
-          <img
-            style={{ height: "25px", width: "25px" }}
-            src="src/assets/terminal-box-fill-svgrepo-com.svg"
-            alt="terminal"
-          />
+      <div>
+        <section>
+          <img />
           <h2>Yogeth.Dev</h2>
         </section>
-        <h4 style={{ textAlign: "center" }}>
-          <span
-            style={{
-              color: "#8B919D",
-              fontFamily: "Inter",
-              fontWeight: "400px",
-            }}
-          >
+        <h4 >
+          <span>
             ©
           </span>{" "}
           2026 Yogeth | Built with React.js

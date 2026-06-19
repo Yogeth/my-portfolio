@@ -1,14 +1,17 @@
-import './styles/navBar.css'
+// import './styles/navBar.css'
 import {Data}from './data/data.js'
 export default function NavBar({setBurgerMenu,burgerMenu}) {
   return (
-    <div className='navbar'>
+    <div className='bg-red-900'>
       <section>
-        <img src="src/assets/terminal-box-fill-svgrepo-com.svg" alt="terminal" />
+        <img src="src/assets/terminal-box-fill-svgrepo-com.svg"
+        className="w-[24px] h-[24px]"
+         alt="terminal" />
         <p>{Data.name}.Dev</p>
       </section>
       {!burgerMenu?(
       <img src='src/assets/burger-menu.svg' alt="hamburger-Menu" 
+      className="w-[24px] h-[24px]"
        onClick={()=>setBurgerMenu(!burgerMenu)}
       />
       ):(

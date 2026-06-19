@@ -1,4 +1,4 @@
-import './styles/footer.css'
+// import './styles/footer.css'
 import {FooterData} from '/src/data/data.js'
 import { Link } from 'react-router-dom'
 export default function Footer() {

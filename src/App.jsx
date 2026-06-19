@@ -3,7 +3,6 @@ import Footer from './Footer.jsx'
 import NavBar from './NavBar.jsx';
 import Body from './Body.jsx';
 import BurgerMenu from './pages/BurgerMenu.jsx';
-import './styles/maincontainer.css';
 
 //context
 export const UserContext =createContext();
@@ -15,7 +14,7 @@ function App() {
   });
   const [filterbtn,setfilterbtn]=useState('All Projects');
   return (
-    <div className='mainContainer'> 
+    <div className='bg-red-200'> 
      {burgerMenu&&<BurgerMenu 
      setBurgerMenu={setBurgerMenu}
      theme={theme}
