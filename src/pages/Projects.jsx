@@ -1,4 +1,4 @@
-import "/src/styles/pages/projects.css";
+
 import { ProjectsPageData } from "../data/data.js";
 import { Link } from "react-router";
 import { useContext } from "react";
@@ -9,16 +9,16 @@ export default function Projects() {
   const{filterbtn,setfilterbtn} = useContext(UserContext)
   
   return (
-    <div className="projectsPage">
-      <p className="intro">{ProjectsPageData.intro.toUpperCase()}</p>
+    <div className="p-3 bg-background">
+      <p className="font-bold tracking-widest text-text-primary">{ProjectsPageData.intro}</p>
 
-      <h1 className="projectHeading">{ProjectsPageData.heading}</h1>
+      <h1 className="font-lg text-text-primary pt-3">{ProjectsPageData.heading}</h1>
 
-      <ul className="filterContainer">
+      <ul className="bg-green-200 font-inter">
         {ProjectsPageData.filterbtns.map((element, i) => (
           <li key={i}
-           className="filterBtn"
-           style={{color:filterbtn === element && 'var(--accent-color)'}}
+           className="text-md "
+          //  style={{color:filterbtn === element && 'var(--accent-color)'}}
            onClick={()=>setfilterbtn(ProjectsPageData.filterbtns[i])} >
             {element}
           </li>
