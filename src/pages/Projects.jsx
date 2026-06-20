@@ -39,7 +39,7 @@ export default function Projects() {
 
                 <a href="https://weather-app-woad-mu-26.vercel.app/">
                   <img
-                  className="openIcon"
+                  className=""
                   src="/src/assets/open-in-new-svgrepo-com.svg"
                   alt="open-in-new"
                   height="20px"

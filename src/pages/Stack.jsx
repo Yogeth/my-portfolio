@@ -8,7 +8,7 @@ export default function Stack() {
       <h1 className="text-text-primary text-xl font-bold tracking-wider">
         {StackData.heading}
       </h1>
-      <p className="text-text-secondary text-lg pt-3">{StackData.para}</p>
+      <p className="text-text-secondary tracking-wide text-lg pt-3">{StackData.para}</p>
 
       <div className="grid grid-cols-1 gap-7 pt-5 m-2">
         {StackData.tech.skills.map((el, k) => (
@@ -34,8 +34,8 @@ export default function Stack() {
                     </p>
 
                     <button className="border border-text-secondary h-2 w-full p-[2px] rounded-xl">
-                      <div className=" bg-white  h-full rounded-xl animate-grow" 
-                      style={{"--percent":element.percent}}
+                      <div className=" bg-white  h-full rounded-xl btn-span" 
+                      style={{"--width-percent":element.percent}}
                       ></div>
                     </button>
                   </section>

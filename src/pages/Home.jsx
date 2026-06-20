@@ -3,7 +3,7 @@ import { Link } from "react-router";
 export default function Home() {
   return (
     <>
-      <div className="bg-background p-5 font-inter">
+      <div className="bg-background dark:bg-white p-5 font-inter">
         <div className="flex items-center text-accent gap-2 text-md border-1 border-solid rounded-xl p-1 w-60
         md:text-xl md:w-100">
           <p className="bg-accent h-2.5 w-2.5 rounded-full "></p>
