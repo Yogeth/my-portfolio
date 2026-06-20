@@ -1,20 +1,22 @@
 
 import {FooterData} from '/src/data/data.js'
 import { Link } from 'react-router-dom'
-export default function Footer() {
+export default function Footer({color}) {
 
   return (
-    <div className='bg-surface p-3 flex justify-around sticky bottom-0 z-10'>
+    <div className='p-3 flex justify-around fixed w-full bottom-0 z-10 md:justify-evenly'
+    style={{backgroundColor:color.surface}}>
      {
       FooterData.map((element,i)=>(
         <Link className='link' to={element.endpoint} key={i} >
-          <section className='flex flex-col justify-center items-center'>
+          <section className='flex flex-col justify-center items-center '>
             <img src={element.src} alt={element.alt} 
-            className=''
+            className='md:h-8 md:w-8'
             height="24px"
             width="24px"/>
-            <p className='text-xs font-medium text-text-primary
-             tracking-tight font-inter'>{element.txt}</p>
+            <p className='text-xs font-medium
+             tracking-tight font-inter md:font-semibold md:tracking-normal md:text-sm'
+             style={{color:color.textPrimary}}>{element.txt}</p>
           </section>
         </Link>
       ))

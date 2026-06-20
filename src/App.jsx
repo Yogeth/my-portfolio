@@ -2,6 +2,7 @@ import { useState,createContext} from 'react'
 import Footer from './Footer.jsx'
 import NavBar from './NavBar.jsx';
 import Body from './Body.jsx';
+import { darkColors,lightColors} from './data/colors.js';
 
 //context
 export const UserContext =createContext();
@@ -12,14 +13,16 @@ function App() {
     name:'',email:'',body:' '
   });
   const [filterbtn,setfilterbtn]=useState('All Projects');
-  return (
-    <div className='bg-red-200'> 
-      <NavBar />
 
-      <UserContext.Provider value={{setFormInput,formInput,filterbtn,setfilterbtn}}>
+  let color =isDark?lightColors:darkColors;
+  return (
+    <div style={{background:color.background}} className='min-h-screen'> 
+      <NavBar isDark={isDark} setIsDark={setIsDark} color={color}/>
+
+      <UserContext.Provider value={{setFormInput,formInput,filterbtn,setfilterbtn,isDark,color}}>
         <Body theme={theme}/>
       </UserContext.Provider>
-      <Footer/>
+      <Footer color={color}/>
     </div>
   );
 }

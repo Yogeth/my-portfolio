@@ -6,7 +6,7 @@ import emailjs from "@emailjs/browser";
 export default function Contact() {
   const form = useRef();
 
-  const { formInput, setFormInput } = useContext(UserContext);
+  const { formInput, setFormInput,color } = useContext(UserContext);
   const [isLoading, setIsLoading] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
@@ -73,28 +73,30 @@ export default function Contact() {
   }
 
   return (
-    <div className="bg-background p-3 font-inter">
+    <div className="p-3 font-inter md:p-5">
       <section className="flex flex-col gap-2">
-        <h1 className="text-text-primary text-2xl font-semibold">
+        <h1 className="text-2xl font-semibold md:text-3xl" style={{color:color.textPrimary}}>
           Initialize Connection
         </h1>
 
-        <p className="text-text-secondary text-lg tracking-wide">
+        <p className="text-lg tracking-wide md:text-xl" style={{color:color.textSecondary}}>
           {ContactData.para}
         </p>
       </section>
 
+<div className="lg:px-20">
       <form
         ref={form}
         className="bg-[rgba(172,167,166,0.1)]
              h-full w-full bg-white-900 rounded-md bg-clip-padding backdrop-filter 
-             backdrop-blur-sm bg-opacity-10 border border-gray-100 p-7 grid grid-cols-1 gap-5 my-5"
+             backdrop-blur-sm bg-opacity-10 border border-gray-100 p-7 grid grid-cols-1 gap-5 my-5 md:my-7 md:p-10 md:pt-13"
         onSubmit={handleSubmit}
         noValidate
       >
         <label htmlFor="name">
           <input
-            className="text-text-primary font-medium text-sm border rounded-md p-3 w-full"
+            className="font-medium text-sm border rounded-md p-3 w-full md:text-xl md:tracking-wider md:p-4"
+            style={{color:"#7c3aed",borderColor:color.textPrimary}}
             id="name"
             name="name"
             type="text"
@@ -109,7 +111,8 @@ export default function Contact() {
 
         <label htmlFor="email">
           <input
-            className="text-text-primary font-medium text-sm border rounded-md p-3 w-full"
+            className="font-medium text-sm border rounded-md p-3 w-full md:text-xl md:tracking-wider md:p-4"
+            style={{color:"#7c3aed",borderColor:color.textPrimary}}
             id="email"
             name="email"
             type="email"
@@ -125,7 +128,8 @@ export default function Contact() {
         <label htmlFor="message">
           <textarea
             name="message"
-            className="text-text-primary font-medium text-sm border rounded-md p-2 h-24 w-full"
+            className="font-medium text-sm border rounded-md p-2 h-24 w-full md:text-xl md:tracking-wider md:p-4 md:h-26"
+            style={{color:"#7c3aed",borderColor:color.textPrimary}}
             placeholder="Share your thoughts, project ideas, or just say hello..."
             value={formInput.message || ""}
             onChange={(e) => handleChange(e, "message")}
@@ -136,7 +140,7 @@ export default function Contact() {
         </label>
 
         {submitStatus && (
-          <div role="alert">
+          <div role="alert" className="">
             {submitStatus.type === "success" ? (
               <p className="text-green-400 tracking-wider">Sent Sucess !</p>
             ) : (
@@ -145,16 +149,18 @@ export default function Contact() {
               </p>
             )}
 
-            <p className="text-text-secondary font-normal">
+            <p className="font-normal" style={{color:color.textSecondary}}>
               {" "}
               {submitStatus.message}
             </p>
           </div>
         )}
 
-        <button
+        <div className="flex items-center justify-center">
+          <button
           type="submit"
-          className="bg-accent p-3 rounded-md flex items-center justify-center mx-18"
+          className=" p-3 rounded-md flex items-center w-3/6 justify-center md:w-2/6 md:p-5"
+          style={{backgroundColor:color.accent}}
           disabled={isLoading}
           aria-busy={isLoading}
         >
@@ -172,17 +178,19 @@ export default function Contact() {
           )}
 
         </button>
+        </div>
       </form>
 
       <section className="bg-[rgba(172,167,166,0.1)]
              h-full w-full bg-white-900 rounded-md bg-clip-padding backdrop-filter 
-             backdrop-blur-sm bg-opacity-10 border border-gray-100 p-7 grid grid-cols-1 gap-5 my-5">
-        <h2 className="text-text-primary font-semibold text-xl ">Social_Nodes</h2>
+             backdrop-blur-sm bg-opacity-10 border border-gray-100 p-7 grid grid-cols-1 gap-5 my-5 md:p-10">
+        <h2 className=" font-semibold text-xl md:text-2xl md:tracking-widest" style={{color:color.textPrimary}}>Social_Nodes</h2>
 
         <ul className="mx-6 flex flex-col gap-3">
           {ContactData.social.map((element, index) => (
             <li className="flex justify-between" key={index}>
-              <span className=" text-text-secondary text-lg font-semibold tracking-wider">{element.media}</span>
+              <span className="text-lg font-semibold tracking-wider md:text-xl md:tracking-widest"
+              style={{color:color.textSecondary}}>{element.media}</span>
               <a
                 href={element.link}
                 target="_blank"
@@ -190,10 +198,8 @@ export default function Contact() {
                 aria-label={`Connect with me on ${element.media}`}
                 title={`Open ${element.media}`}
               >
-                <i className="ti ti-external-link"></i>
-
                 <img
-                  className="h-5  w-5"
+                  className="h-5  w-5 md:h-6 w-6"
                   src="/src/assets/open-in-new-svgrepo-com.svg"
                   alt="open_in_new"
                 />
@@ -203,5 +209,6 @@ export default function Contact() {
         </ul>
       </section>
     </div>
+   </div>
   );
 }

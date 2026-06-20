@@ -16,9 +16,13 @@
 
   --font-inter: "Inter", sans-serif;
   --font-jetbrains: "JetBrains Mono", monospace;
-}
 
-@custom-variant dark(&:where(.dark,.dark *));
+  --color-light-background: #f5f5f7;
+  --color-light-accent:#d97706;
+  --color-light-text-primary:#111827;
+  --color-light-text-secondary:#4b5563;
+  --color-light-surface:#ffffff;
+}
 
 .btn-span{
   width:var(--width-percent);

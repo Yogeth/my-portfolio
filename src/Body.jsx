@@ -4,8 +4,11 @@ import Projects from "./pages/Projects";
 import Stack from "./pages/Stack";
 import Contact from "./pages/Contact";
 import PageNotFound from "./pages/PageNotFound";
+import { useContext } from "react";
+import { UserContext } from "./App";
 
 export default function Body({ theme }) {
+  const{color} =useContext(UserContext);
   return (
     <div>
       <Routes>
@@ -14,13 +17,13 @@ export default function Body({ theme }) {
         <Route path="/stack" element={<Stack />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <div className="bg-background py-4">
+      <div className="py-4 pb-24" style={{backgroundColor:color.background}}>
         <section className="flex gap-1 justify-center" >
           <img src="src\assets\terminal-box-fill-svgrepo-com.svg"
           height="18px" width="18px"/>
-          <h2 className="text-text-secondary font-jetbrains">Yogeth.Dev</h2>
+          <h2 className="font-jetbrains font-medium" style={{color:color.textPrimary}}>Yogeth.Dev</h2>
         </section>
-        <h4 className="text-text-secondary text-center font-jetbrains">
+        <h4 className="text-center font-jetbrains" style={{color:color.textSecondary}}>
           <span>
             ©
           </span>{" "}
