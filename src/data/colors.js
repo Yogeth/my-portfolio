@@ -1,4 +1,4 @@
-export const darkColors ={
+export const darkColors = {
   background: "#131313",
   surface: "#393939",
   accent: "#fabd34",

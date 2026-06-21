@@ -18,22 +18,22 @@
   --font-jetbrains: "JetBrains Mono", monospace;
 
   --color-light-background: #f5f5f7;
-  --color-light-accent:#d97706;
-  --color-light-text-primary:#111827;
-  --color-light-text-secondary:#4b5563;
-  --color-light-surface:#ffffff;
+  --color-light-accent: #d97706;
+  --color-light-text-primary: #111827;
+  --color-light-text-secondary: #4b5563;
+  --color-light-surface: #ffffff;
 }
 
-.btn-span{
-  width:var(--width-percent);
-  animation: grow .7s ease-out forwards;
+.btn-span {
+  width: var(--width-percent);
+  animation: grow 0.7s ease-out forwards;
 }
 
 @keyframes grow {
-    from {
-      width:0%;
-    }
-    to{
-      width:var(--width-percent);
-    }
+  from {
+    width: 0%;
   }
+  to {
+    width: var(--width-percent);
+  }
+}
