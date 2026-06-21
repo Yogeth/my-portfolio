@@ -3,7 +3,7 @@ import {Data}from './data/data.js'
 export default function NavBar({isDark,setIsDark,color}) {
   return (
     <div className='flex justify-between p-[18px] sticky top-0 z-10 md:px-7'
-    style={{backgroundColor:color.surface}}>
+    style={{backgroundColor:color.surface,transition:'background-color 1s ease-in-out'}}>
       <section className="flex gap-1  items-center">
         <img src="src/assets/terminal-box-fill-svgrepo-com.svg"
         className="w-[24px] h-[24px] md:h-8 md:w-8"

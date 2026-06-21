@@ -24,8 +24,7 @@ export default function Projects() {
           </li>
         ))}
       </ul>
-
-      <section className="grid grid-cols-1 p-1 gap-7 lg:grid-cols-2 xl:grid-cols-4 xl:p-3">
+       <section className="grid grid-cols-1 p-1 gap-7 lg:grid-cols-2 xl:p-3 xl:grid-cols-[repeat(auto-fit,minmax(auto,auto))]">
         {
         ProjectsPageData.showcase
         .filter((val,k,arr)=>{
@@ -34,7 +33,7 @@ export default function Projects() {
         })
         .map((element, i) => (
             <div key={i} className="p-6 bg-[rgba(172,167,166,0.1)]
-             h-full w-full bg-white-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 ">
+             h-full w-full bg-white-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100">
               <span className="flex items-center justify-between ">
                 <h1 className="text-3xl font-inter font-semibold"
                 style={{color:color.accent}}>{element.title}</h1>
@@ -65,11 +64,11 @@ export default function Projects() {
             </div>
         ))}
 </section>
-       <div className=" xl:w-[1536px] xl:grid xl:justify-start">
+       <div className=" xl:w-[1536px] xl:grid xl:justify-start xl:pt-7 xl:p-3">
          <div className="p-6 bg-[rgba(172,167,166,0.1)]
              h-full w-full bg-white-900 rounded-md bg-clip-padding 
              backdrop-filter backdrop-blur-sm
-              bg-opacity-10 border border-gray-100 flex flex-col gap-3 items-center md:gap-4">
+              bg-opacity-10 border border-gray-100 flex flex-col gap-3 items-center md:gap-4 ">
           <h1 className="text-2xl font-semibold md:text-3xl" style={{color:color.textPrimary}}>Have a Project In Mind ?</h1>
 
           <p className="font-medium font-jetbrains text-lg tracking-wide md:text-2xl md:tracking-normal" style={{color:color.textSecondary}}>Let's build something robust together.</p>

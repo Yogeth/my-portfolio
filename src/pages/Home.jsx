@@ -10,7 +10,7 @@ export default function Home() {
       <div className="p-5 font-inter xl:p-10">
         <div className='flex items-center justify-center gap-2 text-md border-1 border-solid rounded-sm p-1.5 w-60
         md:my-2 xl:rounded-none'style={{color:color.accent}}>
-        <p className='h-2.5 w-2.5 rounded-full' style={{backgroundColor:color.accent}}></p>
+        <p className='h-2.5 w-2.5 rounded-full animate-bounce' style={{backgroundColor:color.accent}}></p>
           <p>AVAILABLE</p>
           <p>FOR</p>
           <p>HIRE</p>
@@ -19,7 +19,7 @@ export default function Home() {
           {HomePageData.name} | {HomePageData.role}
         </p>
         <h1 className="text-4xl font-bold leading-snug tracking-wide xl:text-7xl xl:tracking-wider" style={{color:color.textPrimary}}>
-          Building Scalable <span style={{color:color.accent}}>Full-Stack</span> Solutions
+          Building Scalable <span style={{color:color.accent}} className="animate-pulse">Full-Stack</span> Solutions
         </h1>
         <p  className="p-3  text-lg font-inter font-medium tracking-wide md:text-xl xl:tracking-tight" style={{color:color.textSecondary}}>{HomePageData.para}</p>
         <div className=" flex flex-row gap-4 p-4">

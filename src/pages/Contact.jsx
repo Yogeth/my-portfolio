@@ -73,7 +73,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="p-3 font-inter md:p-5">
+    <div className="p-3 font-inter md:p-5 xl:p-10">
       <section className="flex flex-col gap-2">
         <h1 className="text-2xl font-semibold md:text-3xl" style={{color:color.textPrimary}}>
           Initialize Connection
@@ -84,12 +84,12 @@ export default function Contact() {
         </p>
       </section>
 
-<div className="lg:px-20">
+<div className="lg:px-20 xl:grid xl:px-100 xl:gap-8">
       <form
         ref={form}
         className="bg-[rgba(172,167,166,0.1)]
              h-full w-full bg-white-900 rounded-md bg-clip-padding backdrop-filter 
-             backdrop-blur-sm bg-opacity-10 border border-gray-100 p-7 grid grid-cols-1 gap-5 my-5 md:my-7 md:p-10 md:pt-13"
+             backdrop-blur-sm bg-opacity-10 border border-gray-100 p-7 grid grid-cols-1 gap-5 my-5 md:my-7 md:p-10 md:pt-13 xl:p-15"
         onSubmit={handleSubmit}
         noValidate
       >
@@ -183,7 +183,7 @@ export default function Contact() {
 
       <section className="bg-[rgba(172,167,166,0.1)]
              h-full w-full bg-white-900 rounded-md bg-clip-padding backdrop-filter 
-             backdrop-blur-sm bg-opacity-10 border border-gray-100 p-7 grid grid-cols-1 gap-5 my-5 md:p-10">
+             backdrop-blur-sm bg-opacity-10 border border-gray-100 p-7 grid grid-cols-1 gap-5 my-5 md:p-10 xl:p-15">
         <h2 className=" font-semibold text-xl md:text-2xl md:tracking-widest" style={{color:color.textPrimary}}>Social_Nodes</h2>
 
         <ul className="mx-6 flex flex-col gap-3">

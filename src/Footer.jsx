@@ -5,7 +5,7 @@ export default function Footer({color}) {
 
   return (
     <div className='p-3 flex justify-around fixed w-full bottom-0 z-10 md:justify-evenly'
-    style={{backgroundColor:color.surface}}>
+    style={{backgroundColor:color.surface ,transition:"background-color 1s ease-in out"}}>
      {
       FooterData.map((element,i)=>(
         <Link className='link' to={element.endpoint} key={i} >

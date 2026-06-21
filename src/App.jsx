@@ -16,7 +16,7 @@ function App() {
 
   let color =isDark?lightColors:darkColors;
   return (
-    <div style={{background:color.background}} className='min-h-screen'> 
+    <div style={{background:color.background ,transition:"background 1s ease-in-out"}} className='min-h-screen'> 
       <NavBar isDark={isDark} setIsDark={setIsDark} color={color}/>
 
       <UserContext.Provider value={{setFormInput,formInput,filterbtn,setfilterbtn,isDark,color}}>
