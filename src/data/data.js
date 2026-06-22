@@ -68,7 +68,7 @@ export const ProjectsPageData = {
       para: 'A modern weather dashboard built with React that fetches real-time weather data from external APIs. Demonstrates API integration expertise with live city search, multi-day forecasts, humidity tracking, and fully responsive design that adapts seamlessly across mobile, tablet, and desktop devices.',
       tech: ['React 18', 'CSS3', 'REST APIs', 'Responsive Design'],
       type: 'Reactjs',
-      github: 'https://github.com/Yogeth/weather-app',
+      lnk: 'https://github.com/Yogeth/weather-app',
       features: ['Real-time weather data', 'City search functionality', 'Temperature forecasts', 'Mobile responsive']
     },
     {
@@ -76,15 +76,15 @@ export const ProjectsPageData = {
       para: 'Enterprise-level complaint management system designed to streamline issue tracking within IT departments. Features a React frontend for intuitive complaint submission and a Spring Boot backend with MariaDB persistence. Employees can report hardware failures, software issues, billing concerns, and network problems through a centralized platform with role-based dashboards.',
       tech: ['React', 'Spring Boot 3', 'REST APIs', 'MariaDB', 'Docker'],
       type: 'Java / SpringBoot',
-      github: 'https://github.com/Yogeth/complaintrack',
+      lnk: 'https://github.com/Yogeth/complaintrack',
       features: ['User authentication & authorization', 'Complaint CRUD operations', 'Status tracking', 'Admin dashboard', 'Responsive UI']
     },
     {
       title: 'Task Manager',
       para: 'A productive task management application built with React.js that enables users to create, update, complete, and organize tasks through an intuitive and responsive interface. Focuses on improving workflow efficiency with real-time task updates, filtering options, and clean UI patterns using modern React hooks and state management.',
-      tech: ['React 18', 'JavaScript (ES6+)', 'CSS3', 'React Hooks', 'Local Storage'],
+      tech: ['React 18', 'JavaScript (ES6+)', 'CSS3', 'React Hooks', 'Local Storage','Tailwind css'],
       type: 'Reactjs',
-      github: 'https://github.com/Yogeth/task-manager',
+      lnk: 'https://task-manager-git-main-yogeths-projects.vercel.app/',
       features: ['Add & manage tasks', 'Mark complete/incomplete', 'Delete tasks', 'Filter by status', 'Local persistence']
     },
     {
@@ -92,7 +92,7 @@ export const ProjectsPageData = {
       para: 'Intelligent deployment automation tool that revolutionizes Java Servlet development workflows. Automatically handles WAR file building with Gradle, Apache Tomcat installation and configuration, application deployment, and server launch through a single command. Significantly reduces deployment time and eliminates manual configuration errors.',
       tech: ['Bash Scripting', 'Gradle', 'Apache Tomcat', 'Shell Commands', 'Automation'],
       type: 'Bash',
-      github: 'https://github.com/Yogeth/hot-servlet',
+      lnk: 'https://github.com/Yogeth/hot-servlet',
       features: ['One-command deployment', 'Auto WAR compilation', 'Tomcat auto-setup', 'Server lifecycle management']
     },
   ]

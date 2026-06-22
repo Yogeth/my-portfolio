@@ -54,7 +54,7 @@ export default function Projects() {
                   {element.title}
                 </h1>
 
-                <a href="https://weather-app-woad-mu-26.vercel.app/">
+                <a href={element.lnk}>
                   <img
                     className=""
                     src="/src/assets/open-in-new-svgrepo-com.svg"
