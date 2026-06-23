@@ -24,14 +24,14 @@ export default function NavBar({ isDark, setIsDark, color }) {
       {!isDark ? (
         <img
           className="w-[26px] h-[26px] md:h-8 md:w-8"
-          src="/src/assets/clear-day-svgrepo-com.svg"
+          src="/clear-day-svgrepo-com.svg"
           alt="day"
           onClick={() => setIsDark(!isDark)}
         />
       ) : (
         <img
           className="w-[26px] h-[26px] md:h-8 md:w-8"
-          src="src/assets/moon-svgrepo-com.svg"
+          src="/moon-svgrepo-com.svg"
           alt="night"
           onClick={() => setIsDark(!isDark)}
         />
