@@ -68,7 +68,7 @@ export const ProjectsPageData = {
       para: 'A modern weather dashboard built with React that fetches real-time weather data from external APIs. Demonstrates API integration expertise with live city search, multi-day forecasts, humidity tracking, and fully responsive design that adapts seamlessly across mobile, tablet, and desktop devices.',
       tech: ['React 18', 'CSS3', 'REST APIs', 'Responsive Design'],
       type: 'Reactjs',
-      lnk: 'https://github.com/Yogeth/weather-app',
+      lnk: 'https://weather-app-woad-mu-26.vercel.app/',
       features: ['Real-time weather data', 'City search functionality', 'Temperature forecasts', 'Mobile responsive']
     },
     {
