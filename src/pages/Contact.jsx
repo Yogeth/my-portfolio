@@ -174,14 +174,14 @@ export default function Contact() {
                 <p className="animate-[spin_linear_1s_infinite] origin-center block">
                   <img
                     className="w-7 h-7"
-                    src="src/assets/loading-svgrepo-com.svg"
+                    src="/loading-svgrepo-com.svg"
                     alt="loading.."
                   />
                 </p>
               ) : (
                 <img
                   className="w-7 h-7"
-                  src="src/assets/send-symbol-svgrepo-com.svg"
+                  src="/send-symbol-svgrepo-com.svg"
                   alt="send"
                 />
               )}
@@ -219,7 +219,7 @@ export default function Contact() {
                 >
                   <img
                     className="h-5  w-5 md:h-6 w-6"
-                    src="/src/assets/open-in-new-svgrepo-com.svg"
+                    src="/open-in-new-svgrepo-com.svg"
                     alt="open_in_new"
                   />
                 </a>

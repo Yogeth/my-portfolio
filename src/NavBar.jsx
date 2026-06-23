@@ -10,7 +10,7 @@ export default function NavBar({ isDark, setIsDark, color }) {
     >
       <section className="flex gap-1  items-center">
         <img
-          src="src/assets/terminal-box-fill-svgrepo-com.svg"
+          src="/terminal-box-fill-svgrepo-com.svg"
           className="w-[24px] h-[24px] md:h-8 md:w-8"
           alt="terminal"
         />

@@ -9,25 +9,25 @@ export const Data = {
 export const FooterData = [
   {
     'endpoint': '/',
-    'src': 'src/assets/home-icon.svg',
+    'src': '/home-icon.svg',
     'alt': 'home-icon',
     'txt': 'Home'
   },
   {
     'endpoint': '/projects',
-    'src': 'src/assets/projects.svg',
+    'src': '/projects.svg',
     'alt': 'project-icon',
     'txt': 'Projects'
   },
   {
     'endpoint': '/stack',
-    'src': 'src/assets/stack.svg',
+    'src': '/stack.svg',
     'alt': 'stack-icon',
     'txt': 'Stack'
   },
   {
     'endpoint': '/contact',
-    'src': 'src/assets/mail.svg',
+    'src': '/mail.svg',
     'alt': 'mail-icon',
     'txt': 'Contact'
   }

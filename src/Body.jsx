@@ -20,7 +20,7 @@ export default function Body({ theme }) {
       <div className="py-4 pb-24" style={{ backgroundColor: color.background }}>
         <section className="flex gap-1 justify-center">
           <img
-            src="src\assets\terminal-box-fill-svgrepo-com.svg"
+            src="\terminal-box-fill-svgrepo-com.svg"
             height="18px"
             width="18px"
           />
