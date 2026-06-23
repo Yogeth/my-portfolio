@@ -76,7 +76,7 @@ export const ProjectsPageData = {
       para: 'Enterprise-level complaint management system designed to streamline issue tracking within IT departments. Features a React frontend for intuitive complaint submission and a Spring Boot backend with MariaDB persistence. Employees can report hardware failures, software issues, billing concerns, and network problems through a centralized platform with role-based dashboards.',
       tech: ['React', 'Spring Boot 3', 'REST APIs', 'MariaDB', 'Docker'],
       type: 'Java / SpringBoot',
-      lnk: 'https://github.com/Yogeth/complaintrack',
+      lnk: 'https://complaint-app-lovat.vercel.app/',
       features: ['User authentication & authorization', 'Complaint CRUD operations', 'Status tracking', 'Admin dashboard', 'Responsive UI']
     },
     {
@@ -84,7 +84,7 @@ export const ProjectsPageData = {
       para: 'A productive task management application built with React.js that enables users to create, update, complete, and organize tasks through an intuitive and responsive interface. Focuses on improving workflow efficiency with real-time task updates, filtering options, and clean UI patterns using modern React hooks and state management.',
       tech: ['React 18', 'JavaScript (ES6+)', 'CSS3', 'React Hooks', 'Local Storage','Tailwind css'],
       type: 'Reactjs',
-      lnk: 'https://task-manager-git-main-yogeths-projects.vercel.app/',
+      lnk: 'https://task-manager-gamma-three-92.vercel.app/',
       features: ['Add & manage tasks', 'Mark complete/incomplete', 'Delete tasks', 'Filter by status', 'Local persistence']
     },
     {
