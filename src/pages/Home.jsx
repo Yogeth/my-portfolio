@@ -52,7 +52,7 @@ export default function Home() {
             </p>
           </Link>
           <a
-            href="/Yogeth_CR_Resume.pdf"
+            href="/Yogeth_Resume.docx"
             download="Yogeth_Resume"
             className=" border p-3 w-fit rounded-lg font-medium 
             text-lg xl:rounded-none"
