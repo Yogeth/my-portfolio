@@ -4,7 +4,7 @@ export const darkColors = {
   accent: "#fabd34",
   success: "#4ade80",
 
-  textPrimary: "#e5e2e1",
+  textPrimary: "#e5e2e1",                             
   textSecondary: "#c1c7d3",
 
   button: "#a4c9ff",

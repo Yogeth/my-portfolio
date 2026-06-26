@@ -10,13 +10,17 @@ function App() {
   const [isDark, setIsDark] = useState(false);
   const [theme, setTheme] = useState(false);
   const [formInput, setFormInput] = useState({
-    name: "",
-    email: "",
-    body: " ",
+    subject: "",
+    receiver:"",
+    messageBody:"",
+    captchaToken:""
   });
   const [filterbtn, setfilterbtn] = useState("All Projects");
+  const [captchaToken,setCaptchaToken]=useState(true);
 
   let color = isDark ? lightColors : darkColors;
+
+  console.log(formInput);
   return (
     <div
       style={{
@@ -35,6 +39,8 @@ function App() {
           setfilterbtn,
           isDark,
           color,
+          captchaToken,
+          setCaptchaToken
         }}
       >
         <Body theme={theme} />
