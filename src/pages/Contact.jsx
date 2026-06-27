@@ -35,6 +35,7 @@ export default function Contact() {
     try {
       const response = await fetch(
         "https://email-server-vvyy.onrender.com/captcha-verification",
+        // "http://localhost:8080/captcha-verification",
         {
           method: "POST",
           headers: {
