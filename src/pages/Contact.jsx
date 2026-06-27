@@ -32,6 +32,8 @@ export default function Contact() {
       return;
     }
 
+
+
     setIsLoading(true);
     setSubmitStatus(null);
 
@@ -161,7 +163,7 @@ export default function Contact() {
               </p>
             </div>
           )}
-
+          <CaptchaVerification/>
           <div className="flex items-center justify-center">
             <button
               type="submit"
