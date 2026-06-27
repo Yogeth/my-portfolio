@@ -1,6 +1,8 @@
 import { ContactData } from "../data/data.js";
 import { useContext, useRef, useState } from "react";
 import { UserContext } from "/src/App.jsx";
+import CaptchaVerification from "./CaptchaVerification.jsx";
+
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
