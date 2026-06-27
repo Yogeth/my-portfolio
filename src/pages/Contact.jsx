@@ -127,7 +127,7 @@ export default function Contact() {
               name="receiver"
               type="email"
               placeholder="your.email@example.com"
-              value={formInput.email || ""}
+              value={formInput.receiver || ""}
               onChange={(e) => handleChange(e, "receiver")}
               required
               disabled={isLoading}
