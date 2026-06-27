@@ -23,9 +23,9 @@ export default function Contact() {
     e.preventDefault();
 
     if (
-      !formInput.name?.trim() ||
-      !formInput.email?.trim() ||
-      !formInput.message?.trim()
+      !formInput.subject?.trim() ||
+      !formInput.receiver?.trim() ||
+      !formInput.messageBody?.trim()
     ) {
       setSubmitStatus({
         type: "error",
@@ -55,9 +55,9 @@ export default function Contact() {
       });
 
       setFormInput({
-        name: "",
-        email: "",
-        message: "",
+        subject: "",
+        receiver: "",
+        messageBody: "",
       });
 
       setTimeout(() => {
@@ -108,11 +108,11 @@ export default function Contact() {
               className="font-medium text-sm border rounded-md p-3 w-full md:text-xl md:tracking-wider md:p-4"
               style={{ color: "#7c3aed", borderColor: color.textPrimary }}
               id="name"
-              name="name"
+              name="subject"
               type="text"
               placeholder="Your full name"
-              value={formInput.name || ""}
-              onChange={(e) => handleChange(e, "name")}
+              value={formInput.subject || ""}
+              onChange={(e) => handleChange(e, "subject")}
               required
               disabled={isLoading}
               aria-required="true"
@@ -124,11 +124,11 @@ export default function Contact() {
               className="font-medium text-sm border rounded-md p-3 w-full md:text-xl md:tracking-wider md:p-4"
               style={{ color: "#7c3aed", borderColor: color.textPrimary }}
               id="email"
-              name="email"
+              name="receiver"
               type="email"
               placeholder="your.email@example.com"
               value={formInput.email || ""}
-              onChange={(e) => handleChange(e, "email")}
+              onChange={(e) => handleChange(e, "receiver")}
               required
               disabled={isLoading}
               aria-required="true"
@@ -137,12 +137,12 @@ export default function Contact() {
 
           <label htmlFor="message">
             <textarea
-              name="message"
+              name="messageBody"
               className="font-medium text-sm border rounded-md p-2 h-24 w-full md:text-xl md:tracking-wider md:p-4 md:h-26"
               style={{ color: "#7c3aed", borderColor: color.textPrimary }}
               placeholder="Share your thoughts, project ideas, or just say hello..."
-              value={formInput.message || ""}
-              onChange={(e) => handleChange(e, "message")}
+              value={formInput.messageBody || ""}
+              onChange={(e) => handleChange(e, "messageBody")}
               required
               disabled={isLoading}
               aria-required="true"
