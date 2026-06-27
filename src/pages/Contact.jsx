@@ -1,12 +1,12 @@
 import { ContactData } from "../data/data.js";
 import { useContext, useRef, useState } from "react";
 import { UserContext } from "/src/App.jsx";
-import CaptchaVerification from "./CaptchaVerification.jsx";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const form = useRef();
 
-  const { formInput, setFormInput, color, captchaToken, setCaptchaToken } = useContext(UserContext);
+  const { formInput, setFormInput, color } = useContext(UserContext);
   const [isLoading, setIsLoading] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
@@ -21,9 +21,9 @@ export default function Contact() {
     e.preventDefault();
 
     if (
-      !formInput.subject?.trim() ||
-      !formInput.receiver?.trim() ||
-      !formInput.messageBody?.trim()
+      !formInput.name?.trim() ||
+      !formInput.email?.trim() ||
+      !formInput.message?.trim()
     ) {
       setSubmitStatus({
         type: "error",
@@ -31,30 +31,47 @@ export default function Contact() {
       });
       return;
     }
+
     setIsLoading(true);
+    setSubmitStatus(null);
+
     try {
-      const response = await fetch(
-        "https://email-server-vvyy.onrender.com/captcha-verification",
-        // "http://localhost:8080/captcha-verification",
+      await emailjs.sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        form.current,
         {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formInput),
+          publicKey: import.meta.env.VITE_PUBLIC_KEY,
         },
       );
-      if (response.ok) {
-        const data = await response.text();
-        console.log(data);
-        if(data === "SUCESS"){setCaptchaToken(true),setSubmitStatus({type:"success",message:''})};
-      }
-    } catch (err) {
-      console.log(err);
-    }
 
-    setIsLoading(false);
+      setSubmitStatus({
+        type: "success",
+        message: "Email sent successfully! I'll get back to you soon.",
+      });
+
+      setFormInput({
+        name: "",
+        email: "",
+        message: "",
+      });
+
+      setTimeout(() => {
+        setSubmitStatus(null);
+      }, 5000);
+    } catch (error) {
+      console.error("Email error:", error);
+
+      setSubmitStatus({
+        type: "error",
+        message:
+          "Failed to send email. Please try again or contact me directly via social media.",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   }
+
   return (
     <div className="p-3 font-inter md:p-5 xl:p-10">
       <section className="flex flex-col gap-2">
@@ -87,11 +104,11 @@ export default function Contact() {
               className="font-medium text-sm border rounded-md p-3 w-full md:text-xl md:tracking-wider md:p-4"
               style={{ color: "#7c3aed", borderColor: color.textPrimary }}
               id="name"
-              name="subject"
+              name="name"
               type="text"
               placeholder="Your full name"
-              value={formInput.subject || ""}
-              onChange={(e) => handleChange(e, "subject")}
+              value={formInput.name || ""}
+              onChange={(e) => handleChange(e, "name")}
               required
               disabled={isLoading}
               aria-required="true"
@@ -103,11 +120,11 @@ export default function Contact() {
               className="font-medium text-sm border rounded-md p-3 w-full md:text-xl md:tracking-wider md:p-4"
               style={{ color: "#7c3aed", borderColor: color.textPrimary }}
               id="email"
-              name="receiver"
+              name="email"
               type="email"
               placeholder="your.email@example.com"
-              value={formInput.receiver || ""}
-              onChange={(e) => handleChange(e, "receiver")}
+              value={formInput.email || ""}
+              onChange={(e) => handleChange(e, "email")}
               required
               disabled={isLoading}
               aria-required="true"
@@ -116,12 +133,12 @@ export default function Contact() {
 
           <label htmlFor="message">
             <textarea
-              name="messageBody"
+              name="message"
               className="font-medium text-sm border rounded-md p-2 h-24 w-full md:text-xl md:tracking-wider md:p-4 md:h-26"
               style={{ color: "#7c3aed", borderColor: color.textPrimary }}
               placeholder="Share your thoughts, project ideas, or just say hello..."
-              value={formInput.messageBody || ""}
-              onChange={(e) => handleChange(e, "messageBody")}
+              value={formInput.message || ""}
+              onChange={(e) => handleChange(e, "message")}
               required
               disabled={isLoading}
               aria-required="true"
@@ -144,15 +161,14 @@ export default function Contact() {
               </p>
             </div>
           )}
-          {<CaptchaVerification />}
 
           <div className="flex items-center justify-center">
             <button
               type="submit"
               className=" p-3 rounded-md flex items-center w-3/6 justify-center md:w-2/6 md:p-5"
-              style={{ backgroundColor: captchaToken ? "grey" : color.accent }}
+              style={{ backgroundColor: color.accent }}
+              disabled={isLoading}
               aria-busy={isLoading}
-              disabled={captchaToken}
             >
               {isLoading ? (
                 <p className="animate-[spin_linear_1s_infinite] origin-center block">
