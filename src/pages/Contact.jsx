@@ -34,12 +34,22 @@ export default function Contact() {
       return;
     }
 
-
-
     setIsLoading(true);
     setSubmitStatus(null);
 
     try {
+      const captchaResponse = await fetch(
+        "https://email-server-vvyy.onrender.com/captcha-verification",
+       { method:"POST",
+         headers: {
+        'Content-Type': 'application/json' 
+      },
+      body:JSON.stringify(formInput)
+    }
+      );
+
+      if(!captchaResponse.ok) throw new Error(captchaResponse.status);
+      
       await emailjs.sendForm(
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
