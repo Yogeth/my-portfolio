@@ -21,8 +21,8 @@ export default function CaptchaVerification() {
           console.log("Success token generated!");
           
           if (token) {
-            setFormInput((val) => ({ ...val, captchaToken: token }));
-            setCaptchaToken(false);
+            
+            setCaptchaToken(token);
           }
         },
         "error-callback": function (errorCode) {
@@ -37,7 +37,7 @@ export default function CaptchaVerification() {
         widgetIdRef.current = null;
       }
     };
-  }, [setFormInput, setCaptchaToken]); 
+  }, [setCaptchaToken]); 
   return (
     <div 
       id="turnstile-container" 

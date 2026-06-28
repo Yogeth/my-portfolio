@@ -13,10 +13,9 @@ function App() {
     subject: "",
     receiver:"",
     messageBody:"",
-    captchaToken:""
   });
   const [filterbtn, setfilterbtn] = useState("All Projects");
-  const [captchaToken,setCaptchaToken]=useState(true);
+  const [captchaToken,setCaptchaToken]=useState("");
 
   let color = isDark ? lightColors : darkColors;
 
