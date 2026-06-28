@@ -46,7 +46,7 @@ export default function Contact() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(captchaToken),
+          body:captchaToken,
         },
       );
       const data = await captchaResponse.text();
