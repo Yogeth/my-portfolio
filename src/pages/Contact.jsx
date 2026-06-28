@@ -53,7 +53,7 @@ export default function Contact() {
         throw new Error(captchaResponse.status);
         return;
       }
-console.log(captchaToken);
+console.log("this is captcha token ! : "+captchaToken);
 
       await emailjs.sendForm(
         import.meta.env.VITE_SERVICE_ID,
