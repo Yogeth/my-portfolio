@@ -40,16 +40,20 @@ export default function Contact() {
     try {
       const captchaResponse = await fetch(
         "https://email-server-vvyy.onrender.com/captcha-verification",
-       { method:"POST",
-         headers: {
-        'Content-Type': 'application/json' 
-      },
-      body:JSON.stringify(formInput)
-    }
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formInput),
+        },
       );
 
-      if(!captchaResponse.ok) throw new Error(captchaResponse.status);
-      
+      if (!captchaResponse.ok) {
+        throw new Error(captchaResponse.status);
+        return;
+      }
+
       await emailjs.sendForm(
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
@@ -175,7 +179,7 @@ export default function Contact() {
               </p>
             </div>
           )}
-          <CaptchaVerification/>
+          <CaptchaVerification />
           <div className="flex items-center justify-center">
             <button
               type="submit"
