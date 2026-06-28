@@ -8,7 +8,8 @@ import emailjs from "@emailjs/browser";
 export default function Contact() {
   const form = useRef();
 
-  const { formInput, setFormInput, color,captchaToken } = useContext(UserContext);
+  const { formInput, setFormInput, color, captchaToken } =
+    useContext(UserContext);
   const [isLoading, setIsLoading] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
@@ -48,10 +49,13 @@ export default function Contact() {
           body: JSON.stringify(captchaToken),
         },
       );
-       const data = await captchaResponse.text();
-       console.log(data);
-     
-console.log("this is captcha token ! : "+captchaToken);
+      const data = await captchaResponse.text();
+      if (data !== "SUCCESS") {
+        setSubmitStatus({ type: "error", message: "verification failed" });
+        return;
+      }
+
+      console.log("this is captcha token ! : " + captchaToken);
 
       await emailjs.sendForm(
         import.meta.env.VITE_SERVICE_ID,
