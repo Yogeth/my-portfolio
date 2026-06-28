@@ -49,10 +49,10 @@ export default function Contact() {
         },
       );
 
-      if (!captchaResponse.ok) {
-        throw new Error(captchaResponse.status);
-        return;
-      }
+      // if (!captchaResponse.ok) {
+      //   throw new Error(captchaResponse.status);
+      //   // return;
+      // }
 console.log("this is captcha token ! : "+captchaToken);
 
       await emailjs.sendForm(
