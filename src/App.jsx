@@ -19,7 +19,7 @@ function App() {
 
   let color = isDark ? lightColors : darkColors;
 
-  console.log(formInput);
+  // console.log(formInput);
   return (
     <div
       style={{
