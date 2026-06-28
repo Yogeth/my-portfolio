@@ -45,14 +45,12 @@ export default function Contact() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(),
+          body: JSON.stringify(captchaToken),
         },
       );
-
-      // if (!captchaResponse.ok) {
-      //   throw new Error(captchaResponse.status);
-      //   // return;
-      // }
+       const data = await captchaResponse.text();
+       console.log(data);
+     
 console.log("this is captcha token ! : "+captchaToken);
 
       await emailjs.sendForm(
