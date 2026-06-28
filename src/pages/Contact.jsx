@@ -57,10 +57,14 @@ export default function Contact() {
 
       console.log("this is captcha token ! : " + captchaToken);
 
-      await emailjs.sendForm(
+      await emailjs.send(
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
-        form.current,
+       {
+        subject:formInput.subject,
+        receiver:formInput.receiver,
+        messageBody:formInput.messageBody,
+       },
         {
           publicKey: import.meta.env.VITE_PUBLIC_KEY,
         },
